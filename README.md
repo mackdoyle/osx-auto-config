@@ -6,6 +6,8 @@ Naming Ideas:
 - Mac Attire
 - Getup
 
+WARNING: This project is still in the initial development phase. Many recipes are just place holders at this point.  I do welcome comments on its direction, however.
+
 OS X Auto Config provisions a Mac with all the tools needed for the modern programmer. With a single command you can configure a new machine or have it add great tools you may be missing.
 
 ## Get Started
