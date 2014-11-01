@@ -64,7 +64,7 @@ bash ${DIR}/recipes/file-compression.sh
 bash ${DIR}/recipes/vagrant.sh
 
 # Mods
-bash ${DIR}/recipes/spf-13.sh
+#bash ${DIR}/recipes/spf-13.sh
 
 # Cleanup any messes we left behind
 # ---------------------------------------------------------------------

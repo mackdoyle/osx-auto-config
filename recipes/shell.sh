@@ -1,8 +1,9 @@
-# OS X Shell Environment Setup
+# OS X Terminal Setup
+# Installs the most awesomeness iTerm2 terminal application
 
 # Check for existing installations
 # ###############################################################################
-echo "Beginning Vagrant installation"
+echo "Beginning iTerm2"
 echo "Checking for existing installations..."
 installed="iTerm2"
 
