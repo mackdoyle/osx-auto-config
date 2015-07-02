@@ -4,7 +4,7 @@
 # This is the master file that first installs any needed dependencies and begins to install and configure 
 # ==================================================================
 
-echo "Welcome to the OSX Mavericks provisioning tool. Get ready to feel like a pimp!"
+echo "Welcome to the OS X provisioning tool. Get ready to feel like a pimp!"
 
 # Allow the recipes to be found in relation to where the ignition.sh script was executed
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
