@@ -1,18 +1,24 @@
 #!/bin/bash
+set -o nounset
 # ==================================================================
-# OS X Virtualbox Setup
+# Bower Installation
 # ==================================================================
-recipe="iterm2"
+
+# Check for existing installations
+# ------------------------------------------------------------------
+recipe="yeoman"
+installed_name="yo"
 [[ -z "${DIR}" ]] && DIR=$1
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-source ${DIR}/lib/dependency_check.sh
-check_homebrew_cask
+# Ensure Homebrew is installed before continuing
+check_npm
+echo "Prerequisite check complete."
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_cask_install_recipe ${recipe}
+npm_install_recipe ${recipe} # returns install_status=0 or 1
 
-
+#etc.

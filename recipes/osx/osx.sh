@@ -1,0 +1,194 @@
+#!/bin/bash
+# ==================================================================
+# OS X System Tweaks
+# Decide which of these we should include...
+# ==================================================================
+
+# ------------------------------------------------------------------
+# General
+# ------------------------------------------------------------------
+# Enable keyboard access for all controls/modals
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Enable airdrop-over-ethernet for bridged networks
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+# Enable sub-pixel rendering even if you don't have a fancy Apple display
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Increase the window resize speed for Cocoa apps
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Require password immediately after sleep or screensaver begins.
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Disable autocorrect (srsly.)
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# ------------------------------------------------------------------
+# Finder Windows
+# ------------------------------------------------------------------
+
+# Expand the Save panel by default in all applications
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand the Printer panel by default in all applications
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Allow Finder to quit (using ⌘Q)
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Show all filename extensions in the finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show all hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# Reveal the ~/Library folder
+chflags nohidden ~/Library
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Allow text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Display the full POSIX path as the Finder window's title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Disable the warning shown before you empty the trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Empty the trash securely by default (yes, this will be time consuming)
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+# ------------------------------------------------------------------
+# Dock
+# ------------------------------------------------------------------
+
+# Make hidden applications semi-transparent on the dock
+defaults write com.apple.dock showhidden -bool true
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Add iOS Simulator to Launchpad
+#sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulator.app" "/Applications/iOS Simulator.app"
+
+# ------------------------------------------------------------------
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input
+# ------------------------------------------------------------------
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: map bottom right corner to right-click
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+# Disable OS X press-and-hold keys to increase key repeat rate.
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set up a fast key repeat rate.
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+
+# Decrease the delay until keys are repeated.
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
+# ------------------------------------------------------------------
+# Activity Monitor
+# ------------------------------------------------------------------
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# ------------------------------------------------------------------
+# Sound
+# ------------------------------------------------------------------
+
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# ------------------------------------------------------------------
+# Terminal & iTerm 2                                                
+# ------------------------------------------------------------------
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+# Use a modified version of the Solarized Dark theme by default in Terminal.app
+osascript <<EOD
+tell application "Terminal"
+    local allOpenedWindows
+    local initialOpenedWindows
+    local windowID
+    set themeName to "Solarized Dark xterm-256color"
+    (* Store the IDs of all the open terminal windows. *)
+    set initialOpenedWindows to id of every window
+    (* Open the custom theme so that it gets added to the list
+       of available terminal themes (note: this will open two
+       additional terminal windows). *)
+    do shell script "open '$HOME/init/" & themeName & ".terminal'"
+    (* Wait a little bit to ensure that the custom theme is added. *)
+    delay 1
+    (* Set the custom theme as the default terminal theme. *)
+    set default settings to settings set themeName
+    (* Get the IDs of all the currently opened terminal windows. *)
+    set allOpenedWindows to id of every window
+    repeat with windowID in allOpenedWindows
+        (* Close the additional windows that were opened in order
+           to add the custom theme to the list of terminal themes. *)
+        if initialOpenedWindows does not contain windowID then
+            close (every window whose id is windowID)
+        (* Change the theme for the initial opened terminal windows
+           to remove the need to close them in order for the custom
+           theme to be applied. *)
+        else
+            set current settings of tabs of (every window whose id is windowID) to settings set themeName
+        end if
+    end repeat
+end tell
+EOD
+
+
+
+
