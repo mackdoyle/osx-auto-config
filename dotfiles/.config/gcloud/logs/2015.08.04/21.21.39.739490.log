@@ -1,0 +1,274 @@
+2015-08-04 21:21:44,679 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2015-08-04 21:21:44,683 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'update']
+2015-08-04 21:21:44,685 DEBUG    root            Running gcloud.components.update with Namespace(__calliope_internal_deepest_parser=ArgumentParser(prog='gcloud.components.update', usage=None, description='Ensure that the latest version of each specified component, and the latest\nversion of all components upon which the specified components directly or\nindirectly depend, is installed on the local workstation. If the command\nincludes one or more names of components or packages, the specified components\nare the named components and the components contained in the named packages;\nif the command does not name any components or packages, the specified\ncomponents are all installed components.', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=False), allow_no_backup=True, architecture_override=None, cmd_func=<bound method Command.Run of <googlecloudsdk.calliope.backend.Command object at 0x10bef9910>>, command_path=['gcloud', 'components', 'update'], component_ids=[u'core', u'bq', u'gcloud', u'gsutil'], document=None, format=None, h=None, help=None, http_timeout=None, log_http=None, markdown=None, operating_system_override=None, project=None, quiet=True, sdk_root_override=None, snapshot_url_override=None, trace_token=None, user_output_enabled=None, verbosity=None, version=None).
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ 
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ The following components will be installed:
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     -----------------------------------------------------------------------------
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | BigQuery Command Line Tool                          |     2.0.18 | < 1 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | BigQuery Command Line Tool (Platform Specific)      |     2.0.18 | < 1 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | Cloud SDK Core Libraries (Platform Specific)        | 2015.06.02 | < 1 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | Cloud Storage Command Line Tool                     |       4.13 | 2.7 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | Cloud Storage Command Line Tool (Platform Specific) |       4.12 | < 1 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     | Default set of gcloud commands                      | 2015.07.24 | < 1 MB |
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___     -----------------------------------------------------------------------------
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ 
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ For the latest release notes, please visit:
+  https://dl.google.com/dl/cloudsdk/release/RELEASE_NOTES
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ |- Creating update staging area                             -|
+
+2015-08-04 21:21:45,562 INFO     ___FILE_ONLY___ |
+2015-08-04 21:21:45,563 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:45,563 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:45,563 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:45,574 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:45,605 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:45,805 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:45,938 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,125 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,228 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,277 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,343 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,405 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,505 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,522 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,551 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,579 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,604 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,647 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,676 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,705 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,733 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,763 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,791 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,809 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,844 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,873 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,898 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:46,929 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,008 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,105 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,289 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,410 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,451 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,535 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,580 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,640 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,707 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:47,824 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,012 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,029 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,089 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,255 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,421 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,551 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,578 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:48,578 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:21:48,668 INFO     ___FILE_ONLY___ 
+
+2015-08-04 21:21:48,669 INFO     ___FILE_ONLY___ |- Installing: BigQuery Command Line Tool                   -|
+
+2015-08-04 21:21:48,669 INFO     ___FILE_ONLY___ |
+2015-08-04 21:21:49,122 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:49,182 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:49,213 INFO     ___FILE_ONLY___ =======
+2015-08-04 21:21:49,244 INFO     ___FILE_ONLY___ ======
+2015-08-04 21:21:49,248 INFO     ___FILE_ONLY___ =====
+2015-08-04 21:21:49,254 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,254 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,265 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,266 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,266 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,271 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,275 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,291 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,315 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,333 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,344 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,350 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,370 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,377 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,380 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,400 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,407 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:49,407 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,414 INFO     ___FILE_ONLY___ ==
+2015-08-04 21:21:49,414 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:21:49,440 INFO     ___FILE_ONLY___ |- Installing: BigQuery Command Line Tool (Platform Spec... -|
+
+2015-08-04 21:21:49,440 INFO     ___FILE_ONLY___ |
+2015-08-04 21:21:49,782 INFO     ___FILE_ONLY___ ==============================
+2015-08-04 21:21:49,784 INFO     ___FILE_ONLY___ ===============
+2015-08-04 21:21:49,788 INFO     ___FILE_ONLY___ ===============
+2015-08-04 21:21:49,789 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:21:49,799 INFO     ___FILE_ONLY___ |- Installing: Cloud SDK Core Libraries (Platform Specific) -|
+
+2015-08-04 21:21:49,799 INFO     ___FILE_ONLY___ |
+2015-08-04 21:21:50,233 INFO     ___FILE_ONLY___ ==============================
+2015-08-04 21:21:50,235 INFO     ___FILE_ONLY___ ==========
+2015-08-04 21:21:50,239 INFO     ___FILE_ONLY___ =========
+2015-08-04 21:21:50,251 INFO     ___FILE_ONLY___ ===========
+2015-08-04 21:21:50,251 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:21:50,265 INFO     ___FILE_ONLY___ |- Installing: Cloud Storage Command Line Tool              -|
+
+2015-08-04 21:21:50,265 INFO     ___FILE_ONLY___ |
+2015-08-04 21:21:51,192 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:51,529 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:51,773 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:51,955 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:52,168 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:52,383 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:52,534 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:52,723 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:52,938 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,151 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,377 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,590 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,714 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,840 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:53,965 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,028 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,122 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,217 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,285 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,350 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,438 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,473 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,567 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,633 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,703 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,771 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,836 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,898 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,932 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:54,969 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:55,444 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:55,743 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:56,135 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:56,576 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:56,877 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:57,333 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:57,794 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:58,122 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:58,468 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:58,810 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:59,115 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:59,545 INFO     ___FILE_ONLY___ =
+2015-08-04 21:21:59,909 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:00,289 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:00,627 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:01,040 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:01,578 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:01,728 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:02,095 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:02,470 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:02,747 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:03,065 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:03,363 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:03,621 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:03,871 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:04,151 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:04,591 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:04,960 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:05,262 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:05,700 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:05,700 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:22:05,716 INFO     ___FILE_ONLY___ |- Installing: Cloud Storage Command Line Tool (Platform... -|
+
+2015-08-04 21:22:05,716 INFO     ___FILE_ONLY___ |
+2015-08-04 21:22:06,061 INFO     ___FILE_ONLY___ ==============================
+2015-08-04 21:22:06,063 INFO     ___FILE_ONLY___ ===============
+2015-08-04 21:22:06,073 INFO     ___FILE_ONLY___ ===============
+2015-08-04 21:22:06,073 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:22:06,087 INFO     ___FILE_ONLY___ |- Installing: Default set of gcloud commands               -|
+
+2015-08-04 21:22:06,087 INFO     ___FILE_ONLY___ |
+2015-08-04 21:22:06,608 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:06,699 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:06,759 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:06,820 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:06,880 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:06,940 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,028 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,061 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,119 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,250 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,281 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,340 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,373 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,436 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,467 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,501 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,533 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,591 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,653 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,709 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,742 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,773 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,803 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,833 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,890 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,921 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,953 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,956 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,957 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:07,960 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:08,356 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:08,811 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:09,282 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:09,658 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:09,945 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:10,324 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:10,861 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:11,507 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:12,067 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:12,383 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:12,767 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:13,204 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:13,612 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:13,998 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:14,256 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:14,723 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:15,104 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:15,484 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:15,851 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:16,172 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:16,537 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:16,830 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:17,147 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:17,457 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:17,795 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:18,129 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:18,432 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:18,775 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:19,140 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:19,522 INFO     ___FILE_ONLY___ =
+2015-08-04 21:22:19,522 INFO     ___FILE_ONLY___ |
+
+2015-08-04 21:22:19,538 INFO     ___FILE_ONLY___ 
+
+2015-08-04 21:22:19,538 INFO     ___FILE_ONLY___ Creating backup and activating new installation...
+
+2015-08-04 21:22:19,538 DEBUG    root            Attempting to move directory [/Users/jdoyle/google-cloud-sdk] to [/Users/jdoyle/google-cloud-sdk.staging/.install/.backup]
+2015-08-04 21:22:19,539 DEBUG    root            Attempting to move directory [/Users/jdoyle/google-cloud-sdk.staging] to [/Users/jdoyle/google-cloud-sdk]
+2015-08-04 21:22:19,555 INFO     ___FILE_ONLY___ 
+Update done!
+
+

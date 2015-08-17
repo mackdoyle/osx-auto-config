@@ -1,0 +1,451 @@
+2015-08-07 15:10:12,753 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2015-08-07 15:10:12,762 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'routes']
+2015-08-07 15:10:12,789 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'routes', 'create']
+2015-08-07 15:10:12,804 DEBUG    root            Running gcloud.compute.routes.create with Namespace(__calliope_internal_deepest_parser=ArgumentParser(prog='gcloud.compute.routes.create', usage=None, description='Create a new route.', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=False), cmd_func=<bound method Command.Run of <googlecloudsdk.calliope.backend.Command object at 0x101b9ca50>>, command_path=['gcloud', 'compute', 'routes', 'create'], description=None, destination_range='10.200.1.0/24', document=None, endpoint=None, format=None, h=None, help=None, http_timeout=None, log_http=None, markdown=None, name='default-route-10-200-1-0-24', network='default', next_hop_address=None, next_hop_gateway=None, next_hop_instance='node1', next_hop_instance_zone=None, next_hop_vpn_tunnel=None, next_hop_vpn_tunnel_region=None, priority=1000, project=None, quiet=None, tags=[], trace_token=None, user_output_enabled=None, verbosity=None, version=None).
+2015-08-07 15:10:12,805 DEBUG    root            Starting batch request...
+2015-08-07 15:10:12,805 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZonesService object at 0x101e7b690>, 'List', <ComputeZonesListRequest
+ maxResults: 500
+ project: 'jmd-io'>)
+2015-08-07 15:10:12,805 DEBUG    root            Making batch request...
+2015-08-07 15:10:14,169 DEBUG    root            Batch request done; responses [<ZoneList
+ id: u'projects/jmd-io/zones'
+ items: [<Zone
+ creationTimestamp: u'2014-07-15T10:44:08.663-07:00'
+ description: u'asia-east1-c'
+ id: 2222
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-b'
+ id: 2221
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-a'
+ id: 2220
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'europe-west1-b'
+ id: 2101
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-12-15T13:42:35.748-08:00'
+ description: u'europe-west1-d'
+ id: 2104
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-d'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-d'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-09-02T15:52:35.238-07:00'
+ description: u'europe-west1-c'
+ id: 2103
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'us-central1-f'
+ id: 2004
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-f'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-f'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-b'
+ id: 2001
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-a'
+ id: 2000
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-10-29T11:20:06.229-07:00'
+ description: u'us-central1-c'
+ id: 2002
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'
+ status: StatusValueValuesEnum(UP, 1)>]
+ kind: u'compute#zoneList'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones'>]
+2015-08-07 15:10:30,651 DEBUG    root            Starting batch request...
+2015-08-07 15:10:30,651 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.RoutesService object at 0x101e5d810>, 'Insert', <ComputeRoutesInsertRequest
+ project: 'jmd-io'
+ route: <Route
+ destRange: '10.200.1.0/24'
+ name: 'default-route-10-200-1-0-24'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ nextHopInstance: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a/instances/node1'
+ priority: 1000
+ tags: []
+ warnings: []>>)
+2015-08-07 15:10:30,652 DEBUG    root            Making batch request...
+2015-08-07 15:10:31,319 DEBUG    root            Batch request done; responses [<Operation
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:31,319 DEBUG    root            Operations to inspect: [<Operation
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:31,319 DEBUG    root            Starting batch request...
+2015-08-07 15:10:31,319 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:31,320 DEBUG    root            Making batch request...
+2015-08-07 15:10:31,625 DEBUG    root            Batch request done; responses [<Operation
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:31,625 DEBUG    root            Sleeping for 1s.
+2015-08-07 15:10:32,630 DEBUG    root            Operations to inspect: [<Operation
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:32,631 DEBUG    root            Starting batch request...
+2015-08-07 15:10:32,631 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:32,632 DEBUG    root            Making batch request...
+2015-08-07 15:10:32,780 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:32,781 DEBUG    root            Sleeping for 2s.
+2015-08-07 15:10:34,784 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:34,785 DEBUG    root            Starting batch request...
+2015-08-07 15:10:34,785 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:34,786 DEBUG    root            Making batch request...
+2015-08-07 15:10:34,961 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:34,962 DEBUG    root            Sleeping for 3s.
+2015-08-07 15:10:37,966 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:37,967 DEBUG    root            Starting batch request...
+2015-08-07 15:10:37,967 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:37,967 DEBUG    root            Making batch request...
+2015-08-07 15:10:38,120 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:38,120 DEBUG    root            Sleeping for 4s.
+2015-08-07 15:10:42,122 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:42,123 DEBUG    root            Starting batch request...
+2015-08-07 15:10:42,123 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:42,124 DEBUG    root            Making batch request...
+2015-08-07 15:10:42,312 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:42,313 DEBUG    root            Sleeping for 5s.
+2015-08-07 15:10:47,317 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:47,317 DEBUG    root            Starting batch request...
+2015-08-07 15:10:47,317 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:47,318 DEBUG    root            Making batch request...
+2015-08-07 15:10:47,474 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:47,474 DEBUG    root            Sleeping for 6s.
+2015-08-07 15:10:52,475 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:52,475 DEBUG    root            Starting batch request...
+2015-08-07 15:10:52,475 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:52,476 DEBUG    root            Making batch request...
+2015-08-07 15:10:52,629 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:52,629 DEBUG    root            Sleeping for 7s.
+2015-08-07 15:10:57,633 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:31.032-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:57,633 DEBUG    root            Starting batch request...
+2015-08-07 15:10:57,633 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x101e401d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ project: 'jmd-io'>)
+2015-08-07 15:10:57,634 DEBUG    root            Making batch request...
+2015-08-07 15:10:57,791 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:10:51.938-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:10:57,791 DEBUG    root            Sleeping for 8s.
+2015-08-07 15:11:02,794 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:10:51.938-07:00'
+ id: 17474988121155072410L
+ insertTime: u'2015-08-07T15:10:29.855-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438985429702-51cbfe75fd570-dcd9be69-22153a94'
+ startTime: u'2015-08-07T15:10:30.057-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 667089644733226327
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:11:02,794 INFO     ___FILE_ONLY___ Created [https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24].
+
+2015-08-07 15:11:02,794 DEBUG    root            Starting batch request...
+2015-08-07 15:11:02,795 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.RoutesService object at 0x101e5d810>, 'Get', <ComputeRoutesGetRequest
+ project: 'jmd-io'
+ route: u'default-route-10-200-1-0-24'>)
+2015-08-07 15:11:02,795 DEBUG    root            Making batch request...
+2015-08-07 15:11:02,967 DEBUG    root            Batch request done; responses [<Route
+ creationTimestamp: u'2015-08-07T15:10:30.207-07:00'
+ destRange: u'10.200.1.0/24'
+ id: 667089644733226327
+ kind: u'compute#route'
+ name: u'default-route-10-200-1-0-24'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ nextHopInstance: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a/instances/node1'
+ priority: 1000
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/routes/default-route-10-200-1-0-24'
+ tags: []
+ warnings: []>]
+2015-08-07 15:11:02,997 INFO     ___FILE_ONLY___ NAME                        NETWORK DEST_RANGE    NEXT_HOP                      PRIORITY
+2015-08-07 15:11:02,997 INFO     ___FILE_ONLY___ 
+
+2015-08-07 15:11:02,997 INFO     ___FILE_ONLY___ default-route-10-200-1-0-24 default 10.200.1.0/24 us-central1-a/instances/node1 1000
+2015-08-07 15:11:02,997 INFO     ___FILE_ONLY___ 
+

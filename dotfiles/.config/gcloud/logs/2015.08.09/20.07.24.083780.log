@@ -1,0 +1,281 @@
+2015-08-09 20:07:24,230 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2015-08-09 20:07:24,269 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall_rules']
+2015-08-09 20:07:24,346 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'firewall-rules', 'create']
+2015-08-09 20:07:24,355 INFO     oauth2client.client Refreshing access_token
+2015-08-09 20:07:24,785 DEBUG    root            Running gcloud.compute.firewall-rules.create with Namespace(__calliope_internal_deepest_parser=ArgumentParser(prog='gcloud.compute.firewall-rules.create', usage=None, description='*{command}* is used to create firewall rules to allow incoming\ntraffic to a network.', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=False), allow=['tcp:36000'], cmd_func=<bound method Command.Run of <googlecloudsdk.calliope.backend.Command object at 0x102cef8d0>>, command_path=['gcloud', 'compute', 'firewall-rules', 'create'], description=None, document=None, endpoint=None, format=None, h=None, help=None, http_timeout=None, log_http=None, markdown=None, name='default-allow-hello', network='default', project=None, quiet=None, source_ranges=[], source_tags=[], target_tags=[], trace_token=None, user_output_enabled=None, verbosity=None, version=None).
+2015-08-09 20:07:24,786 DEBUG    root            Starting batch request...
+2015-08-09 20:07:24,786 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.FirewallsService object at 0x102f58fd0>, 'Insert', <ComputeFirewallsInsertRequest
+ firewall: <Firewall
+ allowed: [<AllowedValueListEntry
+ IPProtocol: 'tcp'
+ ports: ['36000']>]
+ name: 'default-allow-hello'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ sourceRanges: ['0.0.0.0/0']
+ sourceTags: []
+ targetTags: []>
+ project: 'jmd-io'>)
+2015-08-09 20:07:24,786 DEBUG    root            Making batch request...
+2015-08-09 20:07:26,044 DEBUG    root            Batch request done; responses [<Operation
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:26,045 DEBUG    root            Operations to inspect: [<Operation
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:26,045 DEBUG    root            Starting batch request...
+2015-08-09 20:07:26,045 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:26,045 DEBUG    root            Making batch request...
+2015-08-09 20:07:26,291 DEBUG    root            Batch request done; responses [<Operation
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:26,291 DEBUG    root            Sleeping for 1s.
+2015-08-09 20:07:27,293 DEBUG    root            Operations to inspect: [<Operation
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:27,293 DEBUG    root            Starting batch request...
+2015-08-09 20:07:27,293 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:27,294 DEBUG    root            Making batch request...
+2015-08-09 20:07:27,480 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:27,480 DEBUG    root            Sleeping for 2s.
+2015-08-09 20:07:29,481 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:29,481 DEBUG    root            Starting batch request...
+2015-08-09 20:07:29,481 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:29,482 DEBUG    root            Making batch request...
+2015-08-09 20:07:29,672 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:29,672 DEBUG    root            Sleeping for 3s.
+2015-08-09 20:07:32,674 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:32,675 DEBUG    root            Starting batch request...
+2015-08-09 20:07:32,675 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:32,676 DEBUG    root            Making batch request...
+2015-08-09 20:07:33,007 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:33,007 DEBUG    root            Sleeping for 4s.
+2015-08-09 20:07:37,009 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:37,009 DEBUG    root            Starting batch request...
+2015-08-09 20:07:37,009 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:37,010 DEBUG    root            Making batch request...
+2015-08-09 20:07:37,172 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:37,172 DEBUG    root            Sleeping for 5s.
+2015-08-09 20:07:42,177 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T20:07:23.472-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:42,177 DEBUG    root            Starting batch request...
+2015-08-09 20:07:42,177 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x103047650>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ project: 'jmd-io'>)
+2015-08-09 20:07:42,178 DEBUG    root            Making batch request...
+2015-08-09 20:07:42,356 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T20:07:34.062-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:42,356 DEBUG    root            Sleeping for 6s.
+2015-08-09 20:07:47,361 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T20:07:34.062-07:00'
+ id: 18031197592370182707L
+ insertTime: u'2015-08-09T20:07:21.752-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1439176041522-51cec48b96352-384416d9-d476c41f'
+ startTime: u'2015-08-09T20:07:22.182-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 3420453398434197075
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-09 20:07:47,361 INFO     ___FILE_ONLY___ Created [https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello].
+
+2015-08-09 20:07:47,362 DEBUG    root            Starting batch request...
+2015-08-09 20:07:47,362 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.FirewallsService object at 0x102f58fd0>, 'Get', <ComputeFirewallsGetRequest
+ firewall: u'default-allow-hello'
+ project: 'jmd-io'>)
+2015-08-09 20:07:47,362 DEBUG    root            Making batch request...
+2015-08-09 20:07:47,549 DEBUG    root            Batch request done; responses [<Firewall
+ allowed: [<AllowedValueListEntry
+ IPProtocol: u'tcp'
+ ports: [u'36000']>]
+ creationTimestamp: u'2015-08-09T20:07:22.449-07:00'
+ description: u''
+ id: 3420453398434197075
+ kind: u'compute#firewall'
+ name: u'default-allow-hello'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/firewalls/default-allow-hello'
+ sourceRanges: [u'0.0.0.0/0']
+ sourceTags: []
+ targetTags: []>]
+2015-08-09 20:07:47,576 INFO     ___FILE_ONLY___ NAME                NETWORK SRC_RANGES RULES     SRC_TAGS TARGET_TAGS
+2015-08-09 20:07:47,576 INFO     ___FILE_ONLY___ 
+
+2015-08-09 20:07:47,577 INFO     ___FILE_ONLY___ default-allow-hello default 0.0.0.0/0  tcp:36000
+2015-08-09 20:07:47,577 INFO     ___FILE_ONLY___ 
+

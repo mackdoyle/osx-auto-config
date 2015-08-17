@@ -1,30 +1,17 @@
 #!/bin/bash
-set -o nounset
 # ==================================================================
-# Sublime Text Installation
+# OS X Sublime Text Installation
 # ==================================================================
-recipe="subime-text"
-status=1
+recipe="sublime-text"
+installed_name="Sublime Text"
+[[ -z "${DIR}" ]] && DIR=$1
 echo "Beginning $recipe installation"
-recipe_check="$(mdfind kMDItemContentTypeTree=com.apple.application-bundle -onlyin /Applications | grep -i "Sublime\ Text.*.app")"
 
-# Install Dependencies
+# Check for existing installations
 # ------------------------------------------------------------------
-echo "Checking for prerequisites..."
+source ${DIR}/lib/dependency_check.sh
 check_homebrew_cask
 
 # Install Recipe
 # ------------------------------------------------------------------
-# if [[ -z "${recipe_check}" ]]; then
-if [[ -z "${recipe_check}" ]]; then
-  echo "Installing ${recipe}"
-  brew_cask_install_recipe  ${recipe} # returns install_status=0 or 1
-  status=${install_status}
-fi
-
-# Display Installation results
-# ------------------------------------------------------------------
-# @params $recipe $status
-show_results ${recipe} ${status}
-
-
+brew_cask_install_recipe ${recipe}

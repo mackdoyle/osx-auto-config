@@ -1,0 +1,53 @@
+2015-08-07 14:49:16,697 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2015-08-07 14:49:16,700 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances']
+2015-08-07 14:49:16,722 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances', 'create']
+2015-08-07 14:49:16,726 DEBUG    root            (gcloud.compute.instances.create) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+Traceback (most recent call last):
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/calliope/cli.py", line 548, in Execute
+    result = args.cmd_func(cli=self, args=args)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/calliope/backend.py", line 1086, in Run
+    last_group = context_filter(tool_context, Http, args)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/calliope/backend.py", line 466, in ContextFilter
+    group.Filter(context, args)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/compute/subcommands/__init__.py", line 48, in Filter
+    _DoFilter(context, self.Http(), 'v1', args)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/calliope/base.py", line 276, in Http
+    return self._http_func(auth=auth, creds=creds)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/calliope/backend.py", line 1081, in Http
+    **kwargs)
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/core/cli.py", line 104, in Http
+    creds = c_store.Load()
+  File "/Users/jdoyle/google-cloud-sdk/./lib/googlecloudsdk/core/credentials/store.py", line 231, in Load
+    raise NoActiveAccountException()
+NoActiveAccountException: You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+2015-08-07 14:49:16,726 ERROR    root            (gcloud.compute.instances.create) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.

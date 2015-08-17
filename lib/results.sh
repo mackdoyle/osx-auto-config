@@ -16,7 +16,17 @@ show_results() {
   else
     echo "${BLUE}${recipe} appears to already be installed.${RESET}"
   fi
-  #etc.
+}
+
+show_config_results() {
+  local recipe=$1
+  local status=$2
+
+  if [[ "${status}" = 0 ]]; then
+    echo "${GREEN}Configuration of ${recipe} completed successfully.${RESET}"
+  else
+    echo "${BLUE}There was a problem configuring ${recipe}. You will need to manually configure it later.${RESET}"
+  fi
 }
 
 declare -i current_level=1
@@ -45,3 +55,4 @@ level_up() {
 
   current_level=$((current_level-1))
 }
+

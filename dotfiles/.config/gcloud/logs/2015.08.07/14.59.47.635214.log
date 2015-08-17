@@ -1,0 +1,462 @@
+2015-08-07 14:59:47,734 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2015-08-07 14:59:47,758 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'ssh']
+2015-08-07 14:59:47,775 DEBUG    root            Running gcloud.compute.ssh with Namespace(__calliope_internal_deepest_parser=ArgumentParser(prog='gcloud.compute.ssh', usage=None, description='SSH into a virtual machine instance.', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=False), cmd_func=<bound method Command.Run of <googlecloudsdk.calliope.backend.Command object at 0x109a4ae50>>, command=None, command_path=['gcloud', 'compute', 'ssh'], container=None, document=None, dry_run=False, endpoint=None, format=None, h=None, help=None, http_timeout=None, implementation_args=[], log_http=None, markdown=None, plain=False, project=None, quiet=None, ssh_flag=None, ssh_key_file=None, trace_token=None, user_host='node1', user_output_enabled=None, verbosity=None, version=None, zone=None).
+2015-08-07 14:59:47,775 DEBUG    root            Starting batch request...
+2015-08-07 14:59:47,776 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZonesService object at 0x109c50790>, 'List', <ComputeZonesListRequest
+ maxResults: 500
+ project: 'jmd-io'>)
+2015-08-07 14:59:47,776 DEBUG    root            Making batch request...
+2015-08-07 14:59:48,906 DEBUG    root            Batch request done; responses [<ZoneList
+ id: u'projects/jmd-io/zones'
+ items: [<Zone
+ creationTimestamp: u'2014-07-15T10:44:08.663-07:00'
+ description: u'asia-east1-c'
+ id: 2222
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-b'
+ id: 2221
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-a'
+ id: 2220
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'europe-west1-b'
+ id: 2101
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-12-15T13:42:35.748-08:00'
+ description: u'europe-west1-d'
+ id: 2104
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-d'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-d'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-09-02T15:52:35.238-07:00'
+ description: u'europe-west1-c'
+ id: 2103
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'us-central1-f'
+ id: 2004
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-f'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-f'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-b'
+ id: 2001
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-a'
+ id: 2000
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-10-29T11:20:06.229-07:00'
+ description: u'us-central1-c'
+ id: 2002
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'
+ status: StatusValueValuesEnum(UP, 1)>]
+ kind: u'compute#zoneList'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones'>]
+2015-08-07 14:59:50,994 DEBUG    root            Starting batch request...
+2015-08-07 14:59:50,995 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.InstancesService object at 0x109c15e50>, 'Get', <ComputeInstancesGetRequest
+ instance: 'node1'
+ project: 'jmd-io'
+ zone: u'us-central1-a'>)
+2015-08-07 14:59:50,995 DEBUG    root            Making batch request...
+2015-08-07 14:59:51,162 DEBUG    root            Batch request done; responses [<Instance
+ canIpForward: True
+ cpuPlatform: u'Intel Sandy Bridge'
+ creationTimestamp: u'2015-08-07T14:51:54.810-07:00'
+ disks: [<AttachedDisk
+ autoDelete: True
+ boot: True
+ deviceName: u'persistent-disk-0'
+ index: 0
+ interface: InterfaceValueValuesEnum(SCSI, 1)
+ kind: u'compute#attachedDisk'
+ licenses: []
+ mode: ModeValueValuesEnum(READ_WRITE, 1)
+ source: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a/disks/node1'
+ type: TypeValueValuesEnum(PERSISTENT, 0)>]
+ id: 13589956722466666301L
+ kind: u'compute#instance'
+ machineType: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a/machineTypes/n1-standard-1'
+ metadata: <Metadata
+ fingerprint: '\xac\x93b\xd7u&\x99('
+ items: []
+ kind: u'compute#metadata'>
+ name: u'node1'
+ networkInterfaces: [<NetworkInterface
+ accessConfigs: [<AccessConfig
+ kind: u'compute#accessConfig'
+ name: u'external-nat'
+ natIP: u'130.211.183.137'
+ type: TypeValueValuesEnum(ONE_TO_ONE_NAT, 0)>]
+ name: u'nic0'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ networkIP: u'10.240.152.239'>]
+ scheduling: <Scheduling
+ automaticRestart: True
+ onHostMaintenance: OnHostMaintenanceValueValuesEnum(MIGRATE, 0)
+ preemptible: False>
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a/instances/node1'
+ serviceAccounts: [<ServiceAccount
+ email: u'250307698358@developer.gserviceaccount.com'
+ scopes: [u'https://www.googleapis.com/auth/compute']>]
+ status: StatusValueValuesEnum(RUNNING, 1)
+ tags: <Tags
+ fingerprint: '\xe3e\xa6J\x90|\xad#'
+ items: []>
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a'>]
+2015-08-07 14:59:51,162 WARNING  root            You do not have an SSH key for Google Compute Engine.
+2015-08-07 14:59:51,162 WARNING  root            [/usr/bin/ssh-keygen] will be executed to generate a key.
+2015-08-07 15:00:17,952 DEBUG    root            Starting batch request...
+2015-08-07 15:00:17,952 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ProjectsService object at 0x109c325d0>, 'Get', <ComputeProjectsGetRequest
+ project: 'jmd-io'>)
+2015-08-07 15:00:17,953 DEBUG    root            Making batch request...
+2015-08-07 15:00:18,240 DEBUG    root            Batch request done; responses [<Project
+ commonInstanceMetadata: <Metadata
+ fingerprint: '\xc2x\xf2\x8f\x14\xdca\xbd'
+ items: [<ItemsValueListEntry
+ key: u'google-compute-default-zone'
+ value: u'us-central1-f'>, <ItemsValueListEntry
+ key: u'google-compute-default-region'
+ value: u'us-central1'>]
+ kind: u'compute#metadata'>
+ creationTimestamp: u'2015-08-07T14:41:10.630-07:00'
+ id: 11119452031395524401L
+ kind: u'compute#project'
+ name: u'jmd-io'
+ quotas: [<Quota
+ limit: 1000.0
+ metric: MetricValueValuesEnum(SNAPSHOTS, 15)
+ usage: 0.0>, <Quota
+ limit: 5.0
+ metric: MetricValueValuesEnum(NETWORKS, 13)
+ usage: 1.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(FIREWALLS, 3)
+ usage: 4.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(IMAGES, 6)
+ usage: 0.0>, <Quota
+ limit: 1.0
+ metric: MetricValueValuesEnum(STATIC_ADDRESSES, 17)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(ROUTES, 14)
+ usage: 2.0>, <Quota
+ limit: 15.0
+ metric: MetricValueValuesEnum(FORWARDING_RULES, 4)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(TARGET_POOLS, 20)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(HEALTH_CHECKS, 5)
+ usage: 0.0>, <Quota
+ limit: 23.0
+ metric: MetricValueValuesEnum(IN_USE_ADDRESSES, 11)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(TARGET_INSTANCES, 19)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(TARGET_HTTP_PROXIES, 18)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(URL_MAPS, 22)
+ usage: 0.0>, <Quota
+ limit: 3.0
+ metric: MetricValueValuesEnum(BACKEND_SERVICES, 0)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(INSTANCE_TEMPLATES, 10)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(INSTANCE_GROUPS, 8)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(INSTANCE_GROUP_MANAGERS, 9)
+ usage: 0.0>, <Quota
+ limit: 5.0
+ metric: MetricValueValuesEnum(TARGET_VPN_GATEWAYS, 21)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(VPN_TUNNELS, 23)
+ usage: 0.0>]
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'>]
+2015-08-07 15:00:18,241 DEBUG    root            Current SSH keys in project: []
+2015-08-07 15:00:18,241 DEBUG    root            Starting batch request...
+2015-08-07 15:00:18,241 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ProjectsService object at 0x109c325d0>, 'SetCommonInstanceMetadata', <ComputeProjectsSetCommonInstanceMetadataRequest
+ metadata: <Metadata
+ fingerprint: '\xc2x\xf2\x8f\x14\xdca\xbd'
+ items: [<ItemsValueListEntry
+ key: u'google-compute-default-region'
+ value: u'us-central1'>, <ItemsValueListEntry
+ key: u'google-compute-default-zone'
+ value: u'us-central1-f'>, <ItemsValueListEntry
+ key: 'sshKeys'
+ value: 'jdoyle:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbEph1Iaip67d2vwmbfxwylLmI9Jx9mgln4jMhPQumRJsXDGm4lnnvYEzfVOSEIoBRjSGWhj4KjWPcC7mKtgjT8uOIpJyavdCoih+aCQb5cB5IvIpGkuMxR7NZGm1fhFqgpFnvbj+555UGPfVrCW2cgX9jIzpGLwhQCLhIjlLjhEysPv9VowJ1jHf9z3ycfPCMWHhxT7P7DrhWYIJcQEmzkTv8k3y5eI+LXc4G3GwM8XEGtnPdGiXGQxOvm+ZQZeCGgHVfB3DUR40s8eRhN1a8HCqFbJP2sURwo5hretfbDXso5d0ZCGyhLqzWZi3wvxFzEJtoZ3r8uS16ekEtL4XH jdoyle@APP6G3QPC99130'>]>
+ project: 'jmd-io'>)
+2015-08-07 15:00:18,242 DEBUG    root            Making batch request...
+2015-08-07 15:00:18,954 DEBUG    root            Batch request done; responses [<Operation
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:18,954 DEBUG    root            Operations to inspect: [<Operation
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:18,954 DEBUG    root            Starting batch request...
+2015-08-07 15:00:18,954 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x109c152d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ project: 'jmd-io'>)
+2015-08-07 15:00:18,955 DEBUG    root            Making batch request...
+2015-08-07 15:00:19,146 DEBUG    root            Batch request done; responses [<Operation
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:19,146 DEBUG    root            Sleeping for 1s.
+2015-08-07 15:00:20,149 DEBUG    root            Operations to inspect: [<Operation
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:20,149 DEBUG    root            Starting batch request...
+2015-08-07 15:00:20,149 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x109c152d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ project: 'jmd-io'>)
+2015-08-07 15:00:20,150 DEBUG    root            Making batch request...
+2015-08-07 15:00:20,333 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:00:18.616-07:00'
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:20,333 DEBUG    root            Sleeping for 2s.
+2015-08-07 15:00:22,334 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:00:18.616-07:00'
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:22,334 DEBUG    root            Starting batch request...
+2015-08-07 15:00:22,334 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.GlobalOperationsService object at 0x109c152d0>, 'Get', <ComputeGlobalOperationsGetRequest
+ operation: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ project: 'jmd-io'>)
+2015-08-07 15:00:22,335 DEBUG    root            Making batch request...
+2015-08-07 15:00:22,489 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-07T15:00:20.460-07:00'
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:22,489 DEBUG    root            Sleeping for 3s.
+2015-08-07 15:00:25,495 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-07T15:00:20.460-07:00'
+ id: 10724955903055289104L
+ insertTime: u'2015-08-07T15:00:17.445-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ operationType: u'setMetadata'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/operations/operation-1438984817328-51cbfc2dfbf80-8755a265-c61ff5da'
+ startTime: u'2015-08-07T15:00:17.660-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 11119452031395524401L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []>]
+2015-08-07 15:00:25,495 INFO     ___FILE_ONLY___ Updated [https://www.googleapis.com/compute/v1/projects/jmd-io].
+
+2015-08-07 15:00:25,495 DEBUG    root            Starting batch request...
+2015-08-07 15:00:25,495 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ProjectsService object at 0x109c325d0>, 'Get', <ComputeProjectsGetRequest
+ project: u'jmd-io'>)
+2015-08-07 15:00:25,496 DEBUG    root            Making batch request...
+2015-08-07 15:00:25,819 DEBUG    root            Batch request done; responses [<Project
+ commonInstanceMetadata: <Metadata
+ fingerprint: '\xad9\xd8\xb5\xc8\xb5/\xb2'
+ items: [<ItemsValueListEntry
+ key: u'google-compute-default-region'
+ value: u'us-central1'>, <ItemsValueListEntry
+ key: u'google-compute-default-zone'
+ value: u'us-central1-f'>, <ItemsValueListEntry
+ key: u'sshKeys'
+ value: u'jdoyle:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDbEph1Iaip67d2vwmbfxwylLmI9Jx9mgln4jMhPQumRJsXDGm4lnnvYEzfVOSEIoBRjSGWhj4KjWPcC7mKtgjT8uOIpJyavdCoih+aCQb5cB5IvIpGkuMxR7NZGm1fhFqgpFnvbj+555UGPfVrCW2cgX9jIzpGLwhQCLhIjlLjhEysPv9VowJ1jHf9z3ycfPCMWHhxT7P7DrhWYIJcQEmzkTv8k3y5eI+LXc4G3GwM8XEGtnPdGiXGQxOvm+ZQZeCGgHVfB3DUR40s8eRhN1a8HCqFbJP2sURwo5hretfbDXso5d0ZCGyhLqzWZi3wvxFzEJtoZ3r8uS16ekEtL4XH jdoyle@APP6G3QPC99130'>]
+ kind: u'compute#metadata'>
+ creationTimestamp: u'2015-08-07T14:41:10.630-07:00'
+ id: 11119452031395524401L
+ kind: u'compute#project'
+ name: u'jmd-io'
+ quotas: [<Quota
+ limit: 1000.0
+ metric: MetricValueValuesEnum(SNAPSHOTS, 15)
+ usage: 0.0>, <Quota
+ limit: 5.0
+ metric: MetricValueValuesEnum(NETWORKS, 13)
+ usage: 1.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(FIREWALLS, 3)
+ usage: 4.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(IMAGES, 6)
+ usage: 0.0>, <Quota
+ limit: 1.0
+ metric: MetricValueValuesEnum(STATIC_ADDRESSES, 17)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(ROUTES, 14)
+ usage: 2.0>, <Quota
+ limit: 15.0
+ metric: MetricValueValuesEnum(FORWARDING_RULES, 4)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(TARGET_POOLS, 20)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(HEALTH_CHECKS, 5)
+ usage: 0.0>, <Quota
+ limit: 23.0
+ metric: MetricValueValuesEnum(IN_USE_ADDRESSES, 11)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(TARGET_INSTANCES, 19)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(TARGET_HTTP_PROXIES, 18)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(URL_MAPS, 22)
+ usage: 0.0>, <Quota
+ limit: 3.0
+ metric: MetricValueValuesEnum(BACKEND_SERVICES, 0)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(INSTANCE_TEMPLATES, 10)
+ usage: 0.0>, <Quota
+ limit: 100.0
+ metric: MetricValueValuesEnum(INSTANCE_GROUPS, 8)
+ usage: 0.0>, <Quota
+ limit: 50.0
+ metric: MetricValueValuesEnum(INSTANCE_GROUP_MANAGERS, 9)
+ usage: 0.0>, <Quota
+ limit: 5.0
+ metric: MetricValueValuesEnum(TARGET_VPN_GATEWAYS, 21)
+ usage: 0.0>, <Quota
+ limit: 10.0
+ metric: MetricValueValuesEnum(VPN_TUNNELS, 23)
+ usage: 0.0>]
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io'>]
+2015-08-07 15:00:25,819 DEBUG    root            polling instance for SSHability
+2015-08-07 15:00:26,920 DEBUG    root            /usr/bin/ssh command: /usr/bin/ssh -i /Users/jdoyle/.ssh/google_compute_engine -o UserKnownHostsFile=/dev/null -o CheckHostIP=no -o StrictHostKeyChecking=no jdoyle@130.211.183.137

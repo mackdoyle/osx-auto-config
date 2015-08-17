@@ -1,0 +1,577 @@
+2015-08-09 22:24:54,328 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2015-08-09 22:24:54,332 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances']
+2015-08-09 22:24:54,354 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'instances', 'create']
+2015-08-09 22:24:54,368 DEBUG    root            Running gcloud.compute.instances.create with Namespace(__calliope_internal_deepest_parser=ArgumentParser(prog='gcloud.compute.instances.create', usage=None, description='Create Google Compute Engine virtual machine instances.', version=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=False), address=None, boot_disk_device_name=None, boot_disk_size=214748364800, boot_disk_type=None, can_ip_forward=True, cmd_func=<bound method Command.Run of <googlecloudsdk.calliope.backend.Command object at 0x10d3d79d0>>, command_path=['gcloud', 'compute', 'instances', 'create'], description=None, disk=None, document=None, endpoint=None, format=None, h=None, help=None, http_timeout=None, image='coreos-stable-717-3-0-v20150710', image_project='coreos-cloud', local_ssd=None, log_http=None, machine_type='n1-standard-1', maintenance_policy=None, markdown=None, metadata={}, metadata_from_file={}, names=['node0'], network='default', no_address=False, no_boot_disk_auto_delete=False, no_restart_on_failure=False, no_scopes=False, preemptible=False, project=None, quiet=None, scopes=['compute-rw'], tags=None, trace_token=None, user_output_enabled=None, verbosity=None, version=None, zone=None).
+2015-08-09 22:24:54,369 DEBUG    root            Starting batch request...
+2015-08-09 22:24:54,369 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZonesService object at 0x10d6dd390>, 'List', <ComputeZonesListRequest
+ maxResults: 500
+ project: 'jmd-io'>)
+2015-08-09 22:24:54,369 DEBUG    root            Making batch request...
+2015-08-09 22:24:55,233 DEBUG    root            Batch request done; responses [<ZoneList
+ id: u'projects/jmd-io/zones'
+ items: [<Zone
+ creationTimestamp: u'2014-07-15T10:44:08.663-07:00'
+ description: u'asia-east1-c'
+ id: 2222
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-b'
+ id: 2221
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.575-07:00'
+ description: u'asia-east1-a'
+ id: 2220
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'asia-east1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/asia-east1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/asia-east1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'europe-west1-b'
+ id: 2101
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-12-15T13:42:35.748-08:00'
+ description: u'europe-west1-d'
+ id: 2104
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-d'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-d'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-09-02T15:52:35.238-07:00'
+ description: u'europe-west1-c'
+ id: 2103
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'europe-west1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/europe-west1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/europe-west1-c'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.447-07:00'
+ description: u'us-central1-f'
+ id: 2004
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-f'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-f'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-b'
+ id: 2001
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-b'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-b'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-05-30T18:35:16.514-07:00'
+ description: u'us-central1-a'
+ id: 2000
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-a'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-a'
+ status: StatusValueValuesEnum(UP, 1)>, <Zone
+ creationTimestamp: u'2014-10-29T11:20:06.229-07:00'
+ description: u'us-central1-c'
+ id: 2002
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'
+ status: StatusValueValuesEnum(UP, 1)>]
+ kind: u'compute#zoneList'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones'>]
+2015-08-09 22:24:57,670 DEBUG    root            Starting batch request...
+2015-08-09 22:24:57,670 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZonesService object at 0x10d6dd390>, 'Get', <ComputeZonesGetRequest
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:24:57,671 DEBUG    root            Making batch request...
+2015-08-09 22:24:57,818 DEBUG    root            Batch request done; responses [<Zone
+ creationTimestamp: u'2014-10-29T11:20:06.229-07:00'
+ description: u'us-central1-c'
+ id: 2002
+ kind: u'compute#zone'
+ maintenanceWindows: []
+ name: u'us-central1-c'
+ region: u'https://www.googleapis.com/compute/v1/projects/jmd-io/regions/us-central1'
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'
+ status: StatusValueValuesEnum(UP, 1)>]
+2015-08-09 22:24:57,819 DEBUG    root            Starting batch request...
+2015-08-09 22:24:57,819 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.InstancesService object at 0x10d6a2a50>, 'Insert', <ComputeInstancesInsertRequest
+ instance: <Instance
+ canIpForward: True
+ disks: [<AttachedDisk
+ autoDelete: True
+ boot: True
+ initializeParams: <AttachedDiskInitializeParams
+ diskSizeGb: 200
+ sourceImage: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>
+ licenses: []
+ mode: ModeValueValuesEnum(READ_WRITE, 1)
+ type: TypeValueValuesEnum(PERSISTENT, 0)>]
+ machineType: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/machineTypes/n1-standard-1'
+ metadata: <Metadata
+ items: []>
+ name: 'node0'
+ networkInterfaces: [<NetworkInterface
+ accessConfigs: [<AccessConfig
+ name: 'external-nat'
+ type: TypeValueValuesEnum(ONE_TO_ONE_NAT, 0)>]
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'>]
+ scheduling: <Scheduling
+ automaticRestart: True>
+ serviceAccounts: [<ServiceAccount
+ email: 'default'
+ scopes: ['https://www.googleapis.com/auth/compute']>]>
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:24:57,821 DEBUG    root            Making batch request...
+2015-08-09 22:24:58,701 DEBUG    root            Batch request done; responses [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:24:58,701 DEBUG    root            Operations to inspect: [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:24:58,701 DEBUG    root            Starting batch request...
+2015-08-09 22:24:58,701 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:24:58,701 DEBUG    root            Making batch request...
+2015-08-09 22:24:58,865 DEBUG    root            Batch request done; responses [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:24:58,866 DEBUG    root            Sleeping for 1s.
+2015-08-09 22:24:59,870 DEBUG    root            Operations to inspect: [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:24:59,870 DEBUG    root            Starting batch request...
+2015-08-09 22:24:59,870 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:24:59,871 DEBUG    root            Making batch request...
+2015-08-09 22:25:00,052 DEBUG    root            Batch request done; responses [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:00,053 DEBUG    root            Sleeping for 2s.
+2015-08-09 22:25:02,058 DEBUG    root            Operations to inspect: [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:02,058 DEBUG    root            Starting batch request...
+2015-08-09 22:25:02,058 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:02,059 DEBUG    root            Making batch request...
+2015-08-09 22:25:02,224 DEBUG    root            Batch request done; responses [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:02,225 DEBUG    root            Sleeping for 3s.
+2015-08-09 22:25:05,225 DEBUG    root            Operations to inspect: [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:05,225 DEBUG    root            Starting batch request...
+2015-08-09 22:25:05,225 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:05,226 DEBUG    root            Making batch request...
+2015-08-09 22:25:05,388 DEBUG    root            Batch request done; responses [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:05,388 DEBUG    root            Sleeping for 4s.
+2015-08-09 22:25:09,393 DEBUG    root            Operations to inspect: [<Operation
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(PENDING, 1)
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: []
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:09,394 DEBUG    root            Starting batch request...
+2015-08-09 22:25:09,394 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:09,395 DEBUG    root            Making batch request...
+2015-08-09 22:25:09,761 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T22:25:04.203-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:09,761 DEBUG    root            Sleeping for 5s.
+2015-08-09 22:25:14,762 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T22:25:04.203-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:14,763 DEBUG    root            Starting batch request...
+2015-08-09 22:25:14,763 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:14,764 DEBUG    root            Making batch request...
+2015-08-09 22:25:14,923 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T22:25:04.203-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:14,924 DEBUG    root            Sleeping for 6s.
+2015-08-09 22:25:19,929 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T22:25:04.203-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 0
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(RUNNING, 2)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:19,929 DEBUG    root            Starting batch request...
+2015-08-09 22:25:19,929 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.ZoneOperationsService object at 0x10d6dd290>, 'Get', <ComputeZoneOperationsGetRequest
+ operation: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:19,930 DEBUG    root            Making batch request...
+2015-08-09 22:25:20,100 DEBUG    root            Batch request done; responses [<Operation
+ endTime: u'2015-08-09T22:25:14.303-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:20,100 DEBUG    root            Sleeping for 7s.
+2015-08-09 22:25:25,105 DEBUG    root            Operations to inspect: [<Operation
+ endTime: u'2015-08-09T22:25:14.303-07:00'
+ id: 15559054964181380396L
+ insertTime: u'2015-08-09T22:24:54.523-07:00'
+ kind: u'compute#operation'
+ name: u'operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ operationType: u'insert'
+ progress: 100
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/operations/operation-1439184294147-51cee349e73ba-bd355c89-e891b02c'
+ startTime: u'2015-08-09T22:24:54.736-07:00'
+ status: StatusValueValuesEnum(DONE, 0)
+ targetId: 15499252449403110250L
+ targetLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ user: u'jasonmackdoyle@gmail.com'
+ warnings: [<WarningsValueListEntry
+ code: CodeValueValuesEnum(DEPRECATED_RESOURCE_USED, 0)
+ data: [<DataValueListEntry
+ key: u'resource_name'
+ value: u'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710'>, <DataValueListEntry
+ key: u'replacement'
+ value: u'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'>]
+ message: u"The resource 'projects/coreos-cloud/global/images/coreos-stable-717-3-0-v20150710' is deprecated. A suggested replacement is 'https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-723-3-0-v20150804'.">, <WarningsValueListEntry
+ code: CodeValueValuesEnum(DISK_SIZE_LARGER_THAN_IMAGE_SIZE, 1)
+ data: [<DataValueListEntry
+ key: u'disk_size_gb'
+ value: u'200'>, <DataValueListEntry
+ key: u'image_size_gb'
+ value: u'9'>]
+ message: u"Disk size: '200 GB' is larger than image size: '9 GB'. The primary root persistent disk partition size will be equal to the image size. The disk needs to be re-partitioned from within an instance before the additional space can be used.">]
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:25,106 INFO     ___FILE_ONLY___ Created [https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0].
+
+2015-08-09 22:25:25,106 DEBUG    root            Starting batch request...
+2015-08-09 22:25:25,106 DEBUG    root            Adding request: (<googlecloudapis.compute.v1.compute_v1_client.InstancesService object at 0x10d6a2a50>, 'Get', <ComputeInstancesGetRequest
+ instance: u'node0'
+ project: 'jmd-io'
+ zone: u'us-central1-c'>)
+2015-08-09 22:25:25,107 DEBUG    root            Making batch request...
+2015-08-09 22:25:25,275 DEBUG    root            Batch request done; responses [<Instance
+ canIpForward: True
+ cpuPlatform: u'Intel Haswell'
+ creationTimestamp: u'2015-08-09T22:24:54.903-07:00'
+ disks: [<AttachedDisk
+ autoDelete: True
+ boot: True
+ deviceName: u'persistent-disk-0'
+ index: 0
+ interface: InterfaceValueValuesEnum(SCSI, 1)
+ kind: u'compute#attachedDisk'
+ licenses: []
+ mode: ModeValueValuesEnum(READ_WRITE, 1)
+ source: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/disks/node0'
+ type: TypeValueValuesEnum(PERSISTENT, 0)>]
+ id: 15499252449403110250L
+ kind: u'compute#instance'
+ machineType: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/machineTypes/n1-standard-1'
+ metadata: <Metadata
+ fingerprint: '\xac\x93b\xd7u&\x99('
+ items: []
+ kind: u'compute#metadata'>
+ name: u'node0'
+ networkInterfaces: [<NetworkInterface
+ accessConfigs: [<AccessConfig
+ kind: u'compute#accessConfig'
+ name: u'external-nat'
+ natIP: u'130.211.190.77'
+ type: TypeValueValuesEnum(ONE_TO_ONE_NAT, 0)>]
+ name: u'nic0'
+ network: u'https://www.googleapis.com/compute/v1/projects/jmd-io/global/networks/default'
+ networkIP: u'10.240.239.214'>]
+ scheduling: <Scheduling
+ automaticRestart: True
+ onHostMaintenance: OnHostMaintenanceValueValuesEnum(MIGRATE, 0)
+ preemptible: False>
+ selfLink: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c/instances/node0'
+ serviceAccounts: [<ServiceAccount
+ email: u'250307698358@developer.gserviceaccount.com'
+ scopes: [u'https://www.googleapis.com/auth/compute']>]
+ status: StatusValueValuesEnum(RUNNING, 1)
+ tags: <Tags
+ fingerprint: '\xe3e\xa6J\x90|\xad#'
+ items: []>
+ zone: u'https://www.googleapis.com/compute/v1/projects/jmd-io/zones/us-central1-c'>]
+2015-08-09 22:25:25,301 INFO     ___FILE_ONLY___ NAME  ZONE          MACHINE_TYPE  PREEMPTIBLE INTERNAL_IP    EXTERNAL_IP    STATUS
+2015-08-09 22:25:25,302 INFO     ___FILE_ONLY___ 
+
+2015-08-09 22:25:25,302 INFO     ___FILE_ONLY___ node0 us-central1-c n1-standard-1             10.240.239.214 130.211.190.77 RUNNING
+2015-08-09 22:25:25,302 INFO     ___FILE_ONLY___ 
+
