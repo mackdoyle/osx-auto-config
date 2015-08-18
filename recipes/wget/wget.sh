@@ -1,7 +1,7 @@
 #!/bin/bash
 set -o nounset
 # ==================================================================
-# OS X wget Setup
+# OS X wget Installation
 # ==================================================================
 
 # Check for existing installations

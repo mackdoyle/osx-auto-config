@@ -1,14 +1,18 @@
-# OS X Dropbox Setup
+#!/bin/bash
+# ==================================================================
+# Dropbox Installation
+# Remote file storage
+# ==================================================================
+recipe="dropbox"
+installed_name="Dropbox"
+echo "Beginning $recipe installation"
 
-# Assumes: 
-# + Homebrew has been installed correctly.
-# + Homebrew-cask has been tapped and installed correctly.
+# Check for existing installations
+# ------------------------------------------------------------------
+check_homebrew_cask
+
+# Install Recipe
+# ------------------------------------------------------------------
+brew_cask_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
 
 
-# Dropbox
-###############################################################################
-brew cask install dropbox
-
-# File System Symlinking
-###############################################################################
-# TODO

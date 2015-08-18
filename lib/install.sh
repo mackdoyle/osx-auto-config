@@ -1,5 +1,4 @@
 #!/bin/bash
-set -o nounset
 # ==================================================================
 # Install Recipe
 # Provides several functions for installing apps and services using
@@ -10,18 +9,35 @@ set -o nounset
 # ------------------------------------------------------------------
 [ -n "${DIR}" ] || echo "$(tput setaf 120)ERROR: Required global 'DIR' no set. Exiting$(tput sgr 0)";
 
+# Install Using Ruby Gem
+# ------------------------------------------------------------------
+gem_install_recipe() {
+  status=1
+  local recipes=$1
+  test $2 && local installed_name=$2 || local installed_name=$1
+
+  for recipe in ${recipes[*]}
+    do
+    local recipe_check=$(type "${installed_name}")
+
+    if [[ -z "${recipe_check}" ]]; then
+      echo "${BLUE}Installing ${recipe}${RESET}"
+      gem install "${recipe}"
+      rbenv rehash
+      status=0
+      show_results ${recipe} ${status}
+    else
+      show_results ${recipe} ${status}
+    fi
+  done
+}
+
 # Install Using Go
 # ------------------------------------------------------------------
 go_install_recipe() {
   status=1
   local recipes=$1
-
-  # Check if installed name was passed in
-  if test $2; then
-    local installed_name=$2
-  else
-    local installed_name=$1
-  fi
+  test $2 && local installed_name=$2 || local installed_name=$1
 
   for recipe in ${recipes[*]}
     do
@@ -43,13 +59,7 @@ go_install_recipe() {
 brew_install_recipe() {
   status=1
   local recipes=$1
-
-  # Check if installed name was passed in
-  if test $2; then
-    local installed_name=$2
-  else
-    local installed_name=$1
-  fi
+  test $2 && local installed_name=$2 || local installed_name=$1
 
   for recipe in ${recipes[*]}
     do
@@ -71,13 +81,7 @@ brew_install_recipe() {
 brew_cask_install_recipe() {
   status=1
   local recipes=$1
-
-  # Check if installed name was passed in
-  if test $2; then
-    local installed_name=$2
-  else
-    local installed_name=$1
-  fi
+  test $2 && local installed_name=$2 || local installed_name=$1
 
   local recipe_check="$(mdfind kMDItemContentTypeTree=com.apple.application-bundle -onlyin /Applications | grep ${recipe})"
 
@@ -96,13 +100,7 @@ brew_cask_install_recipe() {
 npm_install_recipe() {
   status=1
   local recipes=$1
-
-  # Check if installed name was passed in
-  if test $2; then
-    local installed_name=$2
-  else
-    local installed_name=$1
-  fi
+  test $2 && local installed_name=$2 || local installed_name=$1
 
   for recipe in ${recipes[*]}
     do
@@ -124,13 +122,7 @@ npm_install_recipe() {
 curl_download_recipe() {
   install_status=1
   local recipe=$1
-
-    # Check if installed name was passed in
-  if test $2; then
-    local installed_name=$2
-  else
-    local installed_name=$1
-  fi
+  test $2 && local installed_name=$2 || local installed_name=$1
   
   local recipe_check=$(type "${recipe}")
 

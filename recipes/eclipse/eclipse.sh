@@ -1,14 +1,18 @@
-# OS X IDE Setup
+#!/bin/bash
+# ==================================================================
+# Eclipse Installation
+# Another open source IDE
+# ==================================================================
+recipe="eclipse"
+installed_name="Eclipse"
+echo "Beginning $recipe installation"
 
-# Assumes: 
-# + Homebrew has been installed correctly.
-# + Homebrew-cask has been tapped and installed correctly.
+# Check for existing installations
+# ------------------------------------------------------------------
+check_homebrew_cask
+
+# Install Recipe
+# ------------------------------------------------------------------
+brew_cask_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
 
 
-# Install Eclipse
-###############################################################################
-brew cask install Eclipse
-
-# Install Intellij Community Edition
-###############################################################################
-brew cask install intellij-community

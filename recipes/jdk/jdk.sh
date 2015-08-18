@@ -12,7 +12,7 @@ echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-source ${DIR}/lib/dependency_check.sh
+
 
 # Install Recipe
 # ------------------------------------------------------------------
@@ -20,38 +20,40 @@ source ${DIR}/lib/dependency_check.sh
 #JDK-Functions
 function JDK_VERSION_EIGHT
 {
-        echo "Install version jdk-8u25-linux-x64"
- 
-        wget  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.tar.gz" -O /opt/jdk-8u25-linux-x64.rpm
-        rpm -ivh /root/download/jdk-8u25-linux-x64.rpm
- 
-        export JAVA_HOME=/usr/java/jdk1.8.0_25/
-        export PATH=$JAVA_HOME/bin:$PATH
-        export PATH=$PATH:$JAVA_HOME/bin
- 
-        echo 'export JAVA_HOME=/usr/java/jdk1.8.0_25/' >> ~/.bash_profile
-        echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
-        echo 'export PATH=$PATH:$JAVA_HOME"/bin' >> ~/.bash_profile
+        
+  wget  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-macosx-x64.dmg" -O /opt/jdk-8u51-macosx-x64.dmg
+  rpm -ivh /root/download/jdk-8u25-linux-x64.rpm
+
+  export JAVA_HOME=/usr/libexec/java_home
+  export PATH=$JAVA_HOME/bin:$PATH
+  export PATH=$PATH:$JAVA_HOME/bin
+
+  echo 'export JAVA_HOME=/usr/java/jdk1.8.0_25/' >> ~/.bash_profile
+  echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
+  echo 'export PATH=$PATH:$JAVA_HOME"/bin' >> ~/.bash_profile
+  echo 'export JAVA_HOME=/usr/java/jdk1.8.0_25/' >> ~/.zshrc
+  echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
+  echo 'export PATH=$PATH:$JAVA_HOME"/bin' >> ~/.zshrc
 }
  
 function JDK_VERSION_SEVEN
 {
-        echo "Install version jdk-7u60-linux-x64"
- 
-        wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-linux-x64.rpm" -O /opt/jdk-7u60-linux-x64.rpm
- 
- 
-         rpm -ivh /opt/jdk-7u60-linux-x64.rpm
- 
-        export JAVA_HOME=/usr/java/jdk1.7.0_60
-        export PATH=$JAVA_HOME/bin:$PATH
-        export PATH=$PATH:$JAVA_HOME/bin
- 
-        echo 'export JAVA_HOME=/usr/java/jdk1.7.0_60' >> ~/.bash_profile
-        echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
-        echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.bash_profile
-        #Check JAVA_HOME
-        echo $JAVA_HOME
+  echo "Install version jdk-7u60-linux-x64"
+
+  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/7u60-b19/jdk-7u60-linux-x64.rpm" -O /opt/jdk-7u60-linux-x64.rpm
+
+
+   rpm -ivh /opt/jdk-7u60-linux-x64.rpm
+
+  export JAVA_HOME=/usr/java/jdk1.7.0_60
+  export PATH=$JAVA_HOME/bin:$PATH
+  export PATH=$PATH:$JAVA_HOME/bin
+
+  echo 'export JAVA_HOME=/usr/java/jdk1.7.0_60' >> ~/.bash_profile
+  echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bash_profile
+  echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.bash_profile
+  #Check JAVA_HOME
+  echo $JAVA_HOME
 }
  
 echo "Instal JDK 7 or JDK 8 "

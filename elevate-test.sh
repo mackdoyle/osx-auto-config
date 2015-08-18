@@ -1,5 +1,6 @@
 #!/bin/bash
 #set -x
+#set -e
 # ==================================================================
 # We have lift off!
 # This is the master file that first installs any needed dependencies and begins to install and configure 
@@ -8,13 +9,12 @@
 
 # Include Core Settings
 # ---------------------------------------------------------------------
-source init.cfg
-echo "Welcome to the OS X provisioning tool. Get ready to feel like a ${DYELLOW}p${LYELLOW}im${DYELLOW}p${RESET}!"
+source config/init.cfg
 
 # Include Core library files
 # ---------------------------------------------------------------------
 echo "${BLUE}==> ${RESET}${DYELLOW}Loading core library files...${RESET}"
-source "${DIR}"/lib/lib_loader.sh
+source "${DIR}"/config/lib_loader.sh
 echo "${GREEN}Success.${RESET}"
 
 # Check for existing installations
@@ -34,7 +34,10 @@ inet_check
 check_essential
 echo "${GREEN}Success.${RESET}"
 
+# Begin a sudo session
+persist_sudo
 
+# ---------------------------------------------------------------------
 # Install Recipes
 # ---------------------------------------------------------------------
 #bash "${DIR}"/recipes/coda.sh
@@ -44,6 +47,7 @@ source "${DIR}/recipes/redis/redis.sh"
 # Databases
 #source "${DIR}/recipes/redis/redis.sh"
 
+# ---------------------------------------------------------------------
 # Cleanup any messes we left behind
 # ---------------------------------------------------------------------
 echo "${BLUE}==> ${RESET}${DYELLOW}Cleaning up temporary files...${RESET}"

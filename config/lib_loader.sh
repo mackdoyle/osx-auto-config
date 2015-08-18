@@ -10,3 +10,4 @@ source "${DIR}"/lib/results.sh
 source "${DIR}"/lib/dependency_check.sh
 source "${DIR}"/lib/install.sh
 source "${DIR}"/lib/cleanup_install_files.sh
+source "${DIR}"/lib/persist_sudo.sh

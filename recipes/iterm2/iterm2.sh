@@ -1,14 +1,12 @@
 #!/bin/bash
 # ==================================================================
-# OS X Virtualbox Setup
+# OS X iTerm2 Setup
 # ==================================================================
 recipe="iterm2"
-[[ -z "${DIR}" ]] && DIR=$1
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-source ${DIR}/lib/dependency_check.sh
 check_homebrew_cask
 
 # Install Recipe

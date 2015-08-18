@@ -8,14 +8,12 @@
 
 # Include Core Settings
 # ---------------------------------------------------------------------
-source init.cfg
-
-echo "Welcome to the OS X provisioning tool. Get ready to feel like a ${DYELLOW}p${LYELLOW}im${DYELLOW}p${RESET}!"
+source config/init.cfg
 
 # Include Core library files
 # ---------------------------------------------------------------------
 echo "Loading core library files..."
-source "${DIR}/lib/lib_loader.sh"
+source "${DIR}/config/lib_loader.sh"
 echo "${GREEN}Success.${RESET}"
 
 # Check for existing installations
@@ -36,6 +34,8 @@ check_essential
 
 echo "${GREEN}Success.${RESET}"
 
+# Begin a sudo session
+persist_sudo
 
 # Install Recipes
 # ---------------------------------------------------------------------

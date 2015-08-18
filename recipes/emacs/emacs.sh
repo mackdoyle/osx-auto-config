@@ -1,31 +1,18 @@
 #!/bin/bash
 # ==================================================================
-# Emacs Setup
+# Emacs Installation
 # ==================================================================
-recipe="Emacs"
-status=1
+recipe="emacs"
+installed_name="emacs"
+[[ -z "${DIR}" ]] && DIR=$1
 echo "Beginning $recipe installation"
 
-
 # Check for existing installations
-# ---------------------------------------------------------------------
-echo "Checking for prerequisites..."
-# Ensure Homebrew is installed before continuing
-type brew >/dev/null 2>&1 || { echo >&2 "Homebrew not found. Attempting to install it for you"; bash $(DIR)/scripts/homebrew.sh; }
+# ------------------------------------------------------------------
+check_homebrew
 
+# Install Recipe
+# ------------------------------------------------------------------
+brew_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
 
-# Install Sublime Text
-# ---------------------------------------------------------------------
-echo "Installing $recipe"
-brew install emacs
-status=$status+1
-
-# Display Installation results
-# ---------------------------------------------------------------------
-if [[ "$status" != "" ]]; then
-  echo "$(tput setaf 165)Installation of $recipe status successfully.$(tput sgr 0)"
-fi
-#etc.
-
-exit $?
 

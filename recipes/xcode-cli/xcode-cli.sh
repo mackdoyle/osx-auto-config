@@ -14,7 +14,7 @@ recipe_check="$(type ${recipe})"
 # ------------------------------------------------------------------
 if [[ -z "${recipe_check}" ]]; then
 	osx_vers=$(sw_vers -productVersion | awk -F "." '{print $2}')
-	cmd_line_tools_temp_file="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
+	cmd_line_tools_temp_file="${DIR}/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
 
 	# For OS X 10.9.x and 10.10.x
 	# On these versions the Command Line Tools package is available via the Software Update Feed.
@@ -61,6 +61,10 @@ if [[ -z "${recipe_check}" ]]; then
 	fi
 
 fi 
+
+# Agree to Xcode license on a system level
+# ---------------------------------------------------------------------
+sudo xcodebuild -license
 
 # Display Installation results
 # ---------------------------------------------------------------------

@@ -1,26 +1,18 @@
 #!/bin/bash
-set -o nounset
 # ==================================================================
-# Coda Setup
+# Dash Installation
+# Quick access to official documentation
 # ==================================================================
 recipe="dash"
-status=1
+installed_name="Dash"
 echo "Beginning $recipe installation"
-recipe_check="$(mdfind kMDItemContentTypeTree=com.apple.application-bundle -onlyin /Applications | grep -i "Dash..app")"
 
-# Install Dependencies
+# Check for existing installations
 # ------------------------------------------------------------------
-echo "Checking for prerequisites..."
-check_homebrew
+check_homebrew_cask
 
 # Install Recipe
 # ------------------------------------------------------------------
-if [[ -z "${recipe_check}" ]]; then
-  echo "Installing ${recipe}"
-  brew_cask_install_recipe  ${recipe} # returns install_status=0 or 1
-  status=${install_status}
-fi
+brew_cask_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
 
-# Display Installation results
-# ------------------------------------------------------------------
-show_results ${recipe} ${status}
+
