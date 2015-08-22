@@ -16,9 +16,11 @@ delim_to_array() {
   local delim=$2
   local oifs=$IFS;
   
-  IFS="$delim";
+  IFS="$delim ";
   delim_to_array_=($list);
   IFS=$oifs;
 
   #echo "${delim_to_array_[*]}"
 }
+
+

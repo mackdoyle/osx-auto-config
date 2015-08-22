@@ -25,23 +25,20 @@ function HELP {
 # ----------------------------------------------------------------------
 while getopts :af:l:sh FLAG; do
   case $FLAG in
-    a) # Load list of all supported apps
+    a) # -- Load list of all supported apps --
       echo "UNDER CONSTRUCTION"
       exit 1
       ;;
-    f) # Create list of recipe sources from an arument list
+    f) # -- Create list of recipe sources from an arument list --
       recipe_list=$(cat $OPTARG)
       ;;
     l)
       recipe_list=( $OPTARG )
-
-      #counter=0
-      #for n in ${APP_LIST[*]}; do
-      #  counter=$[counter + 1]
-      #  echo "$n"
-      #done
+      echo "COUNT: $#array_list_[@]"
+      echo "UNDER CONSTRUCTION"
+      exit 1
       ;;
-    s) # Show a list of supported apps
+    s) # -- Show a list of supported apps --
       recipe_list=$(ls -m "${DIR}/recipes")
       echo "UNDER CONSTRUCTION"
       exit 1
@@ -49,11 +46,11 @@ while getopts :af:l:sh FLAG; do
     h)
       HELP
       ;;
-    \?)  # Show Option Argument Error
+    \?)  # -- Show Option Argument Error --
       echo -e \\n"${RED}ERROR: (◦︵○)${RESET}\\nInvalid option: ${BOLD}-$OPTARG${RESET}. Use ${BOLD}-h${RESET} for help." 
       exit 1
       ;;
-    :)  # Show Invalid Argument Error
+    :)  # -- Show Invalid Argument Error --
       echo -e \\n"${RED}ERROR: (◦︵○)${RESET}\\nOption ${BOLD}-$OPTARG${RESET} requires an argument. Use ${BOLD}-h${RESET} for help."
       exit 1
       ;;

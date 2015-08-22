@@ -3,7 +3,7 @@
 # OS X MongoDB Installation
 # ==================================================================
 recipe="mongodb"
-installed_name="mongodb"
+installed_name="mongo"
 echo "Beginning $recipe installation"
 
 # Check for existing installations

@@ -1,14 +1,20 @@
 #!/bin/bash
 
 # ======================================================================
-# Cleanse File Names
-# Make lower case and replce spaces with underscores
+# Data normalization helpers
 # ======================================================================
 
-cleanse_fname(){
-  local fname=$1
-  fname=${fname,,} # lcase
-  fname=${fname, ,_} # Underscore spaces
+# Make lower case and replce spaces with underscores
+# ---------------------------------------------------------------------
+function cleanse_string() {
+  local cleanse_string_=$1
+  cleanse_string_=${cleanse_string_,,} # lcase
+  cleanse_string_=${cleanse_string_, ,_} # Underscore spaces
+}
 
-  echo "${fname}"
+# Remove spaces
+# ---------------------------------------------------------------------
+function remove_spaces() {
+  local remove_spaces_=$1
+  remove_spaces_=${remove_spaces_// /}
 }

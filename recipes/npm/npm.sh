@@ -1,6 +1,6 @@
 #!/bin/sh
 # ==================================================================
-# Node.js Installation
+# NPM Installation
 # This recipe will check if npm was installed with node.js and remove it
 # if so. It will then insrall node.js and npm separately so npm
 # installations are not dependant on sudo.

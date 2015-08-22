@@ -24,7 +24,7 @@ gem_install_recipe() {
 
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      #sudo gem install "${recipe}"
+      sudo gem install "${recipe}"
       status=0
       ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
@@ -72,11 +72,11 @@ brew_install_recipe() {
   
   for recipe in ${recipes[*]}
     do
-    local recipe_check=$(which $installed_name)
-
+    recipe_check=$(which $installed_name)
+    
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      #brew install "${recipe}"
+      brew install "${recipe}"
       status=0
       ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
@@ -102,7 +102,7 @@ brew_cask_install_recipe() {
     recipe_check=$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep "$installed_name")
  
     if [[ -z "${recipe_check}" ]]; then
-      #brew cask install "${recipe}"
+      brew cask install "${recipe}"
       status=0
       ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}

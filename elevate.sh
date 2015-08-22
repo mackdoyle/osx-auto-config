@@ -43,10 +43,8 @@ echo -e "${GREEN}You have what's needed, let's carry on.${RESET}"\\n
 
 # ---------------------------------------------------------------------
 # Install Recipes
-# Source commands for recipes should be availble as 
-# $sourced_recipes[@] as set in parse_getopts.sh
 # ---------------------------------------------------------------------
-echo "RECLIST: ${recipe_list}"
+
 for recipe in ${recipe_list[*]}; do
   source "$DIR/recipes/$recipe/$recipe.sh"
 done
@@ -60,8 +58,9 @@ cleanup_install_files
 # ---------------------------------------------------------------------
 # Run Report
 # ---------------------------------------------------------------------
-echo "${GREEN}The following app where successfully installed...${RESET}"
-echo "${ELEVATED}"
+source "${DIR}"/config/exit.cfg
+echo -e "${GREEN}The following app where successfully installed...${RESET}"
+echo -e "${ELEVATED}"
 
 
 exit $?
