@@ -1,16 +1,17 @@
 #!/bin/bash
 # ==================================================================
-# Ruby version of Sass
-# The best CSS preprocessor, so says me!
+# OS X BFG Installation
+# Alternative to git-filter-branch for cleansing bad data out of 
+# your Git repository history
 # ==================================================================
-recipe="sass"
-installed_name="sass"
+recipe="bfg"
+installed_name="bfg"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_gem
+check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-gem_install_recipe ${recipe}
+brew_install_recipe ${recipe} # returns install_status=0 or 1

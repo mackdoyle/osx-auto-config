@@ -1,16 +1,18 @@
 #!/bin/bash
 # ==================================================================
-# Ruby version of Sass
-# The best CSS preprocessor, so says me!
+# caffeine Installation
+# Keep your mack awake with the lid closed
 # ==================================================================
-recipe="sass"
-installed_name="sass"
+recipe="caffeine"
+installed_name="Caffeine"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_gem
+check_homebrew_cask
 
 # Install Recipe
 # ------------------------------------------------------------------
-gem_install_recipe ${recipe}
+brew_cask_install_recipe ${recipe} ${installed_name}
+
+

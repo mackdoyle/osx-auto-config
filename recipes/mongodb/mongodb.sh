@@ -1,16 +1,17 @@
 #!/bin/bash
 # ==================================================================
-# Ruby version of Sass
-# The best CSS preprocessor, so says me!
+# OS X MongoDB Installation
 # ==================================================================
-recipe="sass"
-installed_name="sass"
+recipe="mongodb"
+installed_name="mongodb"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_gem
+check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-gem_install_recipe ${recipe}
+brew_install_recipe ${recipe} ${installed_name}
+
+

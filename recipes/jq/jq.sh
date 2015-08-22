@@ -1,16 +1,18 @@
 #!/bin/bash
 # ==================================================================
-# Ruby version of Sass
-# The best CSS preprocessor, so says me!
+# OS X ./jq Installation
+# Formatting, colorizing and powerful filtering of JSON responses
+# https://stedolan.github.io/jq/
 # ==================================================================
-recipe="sass"
-installed_name="sass"
+recipe="jq"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_gem
+check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-gem_install_recipe ${recipe}
+brew_install_recipe ${recipe}
+
+

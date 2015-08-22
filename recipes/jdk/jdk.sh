@@ -3,7 +3,10 @@
 # OS X Java Development Kit Installation
 # Source: http://thelinuxfaq.com/213-install-java-7-jdk-7u60-java-8-jdk-8u25-in-centos-fedora-rhel
 # Common Path Reference:
-# JDK Path: /Library/Java/JavaVirtualMachines/jdk1.*.*.jdk
+# JDK Paths
+#    JDK 7.79: http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-macosx-x64.dmg
+#    JDK 7.80: http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-macosx-x64.dmg
+#    JDK 8.51: http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-macosx-x64.dmg
 # ==================================================================
 recipe="jdk"
 success=1
@@ -70,8 +73,8 @@ if [ -f "/usr/java/jdk" ]; then
 echo "JAVA Already Installed in Your System"
 else
  
-    echo "${BLUE}==> Press ( 8 ) to be Installed JDK 8${RESET}"
-    echo "${BLUE}=-> Press ( 7 ) to be Installed JDK 7${RESET}"
+  echo "${BLUE}==> Press ( 8 ) to be Installed JDK 8${RESET}"
+  echo "${BLUE}=-> Press ( 7 ) to be Installed JDK 7${RESET}"
  
 echo "Your Version: "
  

@@ -1,16 +1,17 @@
 #!/bin/bash
 # ==================================================================
-# Ruby version of Sass
-# The best CSS preprocessor, so says me!
+# OS X Amethyst Installation
+# Window Manager with support for focus on mouse home ala classic x-wondows
 # ==================================================================
-recipe="sass"
-installed_name="sass"
+recipe="amethyst"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_gem
+check_homebrew_cask
 
 # Install Recipe
 # ------------------------------------------------------------------
-gem_install_recipe ${recipe}
+brew_cask_install_recipe ${recipe}
+
+

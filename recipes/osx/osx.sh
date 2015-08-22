@@ -155,6 +155,10 @@ defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Auto-focus terminal on mouse hover
+# Doesn't seem to be supported anymore but leaving in place as a desparate hope it comes back
+ defaults write com.apple.Terminal FocusFollowsMouse -bool true
+
 # Use a modified version of the Solarized Dark theme by default in Terminal.app
 osascript <<EOD
 tell application "Terminal"

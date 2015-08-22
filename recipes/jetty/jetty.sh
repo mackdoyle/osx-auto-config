@@ -1,9 +1,10 @@
 #!/bin/bash
 # ==================================================================
-# Cli-Click Installation
-# Mouse clicking in your terminal!
+# Jetty Installation
+# Jetty provides a Web server and javax.servlet container, plus support 
+# for SPDY, WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations.
 # ==================================================================
-recipe="cliclick"
+recipe="jetty"
 echo "Beginning $recipe installation"
 
 # Check for existing installations

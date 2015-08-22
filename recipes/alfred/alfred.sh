@@ -12,4 +12,4 @@ check_homebrew_cask
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_cask_install_recipe ${recipe}
+brew_cask_install_recipe ${recipe} ${installed_name}
