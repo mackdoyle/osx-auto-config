@@ -1,15 +1,17 @@
 #!/bin/bash
 # ==================================================================
-# OS X Amethyst Installation
-# Window Manager with support for focus on mouse home ala classic x-wondows
+# Core Utilities Installation
+# Installs later version of core utilities than what come on OS X by default
 # ==================================================================
-recipe="amethyst"
+recipe="coreutils"
 echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_homebrew_cask
+check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_cask_install_recipe ${recipe}
+brew_install_recipe ${recipe}
+
+
