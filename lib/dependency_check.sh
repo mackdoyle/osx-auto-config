@@ -20,10 +20,16 @@ check_easy_install() {
   type easy_install >/dev/null 2>&1 || { echo >&2 "${YELLOW}Easy Install not found. Attempting to install it for you${RESET}"; source "${DIR}"/recipes/python/python.sh; }
 }
 
+# Check for Gem (Ruby)
+# ----------------------------------------------------------------------
+check_gem() {
+  type gem >/dev/null 2>&1 || { echo >&2 "${YELLOW}Ruby gem not found. Attempting to install it for you${RESET}"; source "${DIR}"/recipes/gem/gem.sh; }
+}
+
 # Check for Git
 # ----------------------------------------------------------------------
-check_virtualbox() {
-  type git >/dev/null 2>&1 || { echo >&2 "${YELLOW}Virtulbox not found. Attempting to install it for you${RESET}"; source "${DIR}"/recipes/git/git.sh; }
+check_git() {
+  type git >/dev/null 2>&1 || { echo >&2 "${YELLOW}Git not found. Attempting to install it for you${RESET}"; source "${DIR}"/recipes/git/git.sh; }
 }
 
 # Check for Homebrew

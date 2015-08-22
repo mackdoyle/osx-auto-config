@@ -8,6 +8,17 @@ set -o nounset
 # Check for Virtualbox
 # ----------------------------------------------------------------------
 cleanup_install_files() {
-  brew doctor && brew cleanup && brew prune
+  if [[ -n $(type brew) ]]; then
+    brew doctor >/dev/null
+    brew cleanup >/dev/null
+    brew prune >/dev/null
+    brew cask cleanup >/dev/null
+    echo "Brew Cleaned"
+  fi
+
+  #if [[ -n $(type rbenv) ]]; then
+    #rbenv rehash
+   # echo "Ruby Env Cleaned"
+  #fi
 }
 

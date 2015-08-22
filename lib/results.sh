@@ -12,9 +12,9 @@ show_results() {
   local status=$2
 
   if [[ "${status}" = 0 ]]; then
-    echo "${GREEN}Installation of ${recipe} completed successfully.${RESET}"
+    echo -e "${GREEN}Installation of ${recipe} completed successfully.${RESET}"\\n
   else
-    echo "${BLUE}${recipe} appears to already be installed.${RESET}"
+    echo -e "${YELLOW}Skipping ${recipe} as it appears to already be installed.${RESET}"\\n
   fi
 }
 
@@ -23,36 +23,9 @@ show_config_results() {
   local status=$2
 
   if [[ "${status}" = 0 ]]; then
-    echo "${GREEN}Configuration of ${recipe} completed successfully.${RESET}"
+    echo -e "${GREEN}Configuration of ${recipe} completed successfully.${RESET}"\\n
   else
-    echo "${BLUE}There was a problem configuring ${recipe}. You will need to manually configure it later.${RESET}"
+    echo -e "${RED}There was a problem configuring ${recipe}. You will need to manually configure it later.${RESET}"\\n
   fi
-}
-
-declare -i current_level=1
-level_up() {
-
-  case $current_level in
-    1)
-      echo "LEVEL UP! Pixel Pusher"
-      ;;
-    2)
-      echo "LEVEL UP! Maker"
-      ;;
-    3)
-      echo "LEVEL UP! Codesmith"
-      ;;
-    4)
-      echo "LEVEL UP! Journeyman"
-      ;;
-    5)
-      echo "LEVEL UP! Power user"
-      ;;
-    6)
-      echo "LEVEL UP! DAMN...."
-      ;;
-  esac
-
-  current_level=$((current_level-1))
 }
 
