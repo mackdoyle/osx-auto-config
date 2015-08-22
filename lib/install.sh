@@ -26,6 +26,7 @@ gem_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       #sudo gem install "${recipe}"
       status=0
+      ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -50,6 +51,7 @@ go_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       go get "${recipe}"
       status=0
+      ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -76,6 +78,7 @@ brew_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       #brew install "${recipe}"
       status=0
+      ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -94,15 +97,19 @@ brew_cask_install_recipe() {
   test "$2" && installed_name="$2" || installed_name="$1"
   set -u
 
-  recipe_check=$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep "$installed_name")
+  for recipe in ${recipes[*]}
+    do
+    recipe_check=$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep "$installed_name")
  
     if [[ -z "${recipe_check}" ]]; then
       #brew cask install "${recipe}"
       status=0
+      ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
     fi
+  done
 }
 
 # Install Using Node Package Manager
@@ -124,6 +131,7 @@ npm_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       npm install -g "${recipe}"
       status=0
+      ELEVATED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -137,19 +145,23 @@ curl_download_recipe() {
   local status=1
   local recipe_check=""
   local installed_name=""
-  local recipes=($1)
+  local recipes=$1
   set +u
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
-  local recipe_check=$(type "${recipe}")
+  for recipe in ${recipes[*]}
+    do
+    recipe_check=$(type "${recipe}")
 
-  if test ! "${recipe_check}"; then
-    echo "${BLUE}Installing ${recipe}${RESET}"
-    curl -q "${recipe}" -0 "${DIR}/tmp"
-    # NEED TO ADD METHOD OF AUTO INSTALLING AFTER DOWNLOAD
-    status=0
-  fi
+    if test ! "${recipe_check}"; then
+      echo "${BLUE}Installing ${recipe}${RESET}"
+      curl -q "${recipe}" -0 "${DIR}/tmp"
+      # NEED TO ADD METHOD OF AUTO INSTALLING AFTER DOWNLOAD
+      status=0
+      ELEVATED+=("${recipe}")
+    fi
+  done
 }
 
 

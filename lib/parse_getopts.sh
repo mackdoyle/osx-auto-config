@@ -26,16 +26,14 @@ function HELP {
 while getopts :af:l:sh FLAG; do
   case $FLAG in
     a) # Load list of all supported apps
-      # TODO
+      echo "UNDER CONSTRUCTION"
+      exit 1
       ;;
     f) # Create list of recipe sources from an arument list
-      app_list=$(cat $OPTARG)
-      
-      #sourced_recipes=$APP_LIST
+      recipe_list=$(cat $OPTARG)
       ;;
     l)
-      #APP_LIST=( $OPTARG )
-      app_list=( $OPTARG )
+      recipe_list=( $OPTARG )
 
       #counter=0
       #for n in ${APP_LIST[*]}; do
@@ -43,8 +41,9 @@ while getopts :af:l:sh FLAG; do
       #  echo "$n"
       #done
       ;;
-    s)
-      echo "Show a list of supported apps"
+    s) # Show a list of supported apps
+      recipe_list=$(ls -m "${DIR}/recipes")
+      echo "UNDER CONSTRUCTION"
       exit 1
       ;;
     h)
