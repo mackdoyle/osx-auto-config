@@ -1,0 +1,69 @@
+
+# Exclude configuration files that may contain sensitive information.
+# ---------------------------------------------
+
+
+# Exclude hidden OS files.
+# ---------------------------------------------
+# OS X
+  ._*
+  *~
+  Desktop.ini
+  Thumbs.db
+  .Spotlight-V100
+  .DS_Store
+  .DS_Store?
+  _vti_*
+  *.LCK
+  *.TMP
+  .Trashes
+
+# Exclude other VCS tracking files.
+# ---------------------------------------------
+  .#*
+  .svn
+  .bzr
+
+
+# Exclude IDE management files.
+# ---------------------------------------------
+  # CODA
+
+  # ECLIPSE
+  .settings
+  .buildpath
+
+  # NETBEANS
+  netbeans
+  /nbproject/private/
+  /nbproject
+
+  # PHP/WEB STORM
+  .idea
+
+  # SUBLIME TEXT
+  .sublime-project
+  .sublime-workspace
+
+  # GENERAL
+  WS_FTP.LOG
+
+
+# Exclude Workflow Resources
+# ---------------------------------------------
+  .codekit
+  codekit.json
+  .sass-cache
+  **/_bower_components
+  /dist
+  /node_modules
+  .tmp
+  *.pyc
+
+# Exclude Local only files.
+# ---------------------------------------------
+  _notes
+  *.md
+  *.markdown
+  .UlyssesRoot
+  .Ulysses-Group.plist

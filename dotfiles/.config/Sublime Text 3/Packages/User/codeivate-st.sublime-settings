@@ -1,0 +1,11 @@
+{
+	"dialog": false,
+	"growl_active": true,
+	"machine_name": "Squarepusher",
+	"notify_send_active": true,
+	"notify_send_path": "/usr/bin/notify-send",
+	"pushover_active": false,
+	"pushover_user_id": "",
+	"user_id": "53c25005fa2b795fefd23e053420087a516f84e5",
+	"user_token": "402ea3016e985e21e9b17efe3175440f416418f0"
+}
