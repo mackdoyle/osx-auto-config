@@ -26,19 +26,16 @@ function HELP {
 while getopts :af:l:sh FLAG; do
   case $FLAG in
     a) # Load list of all supported apps
-      source_recipes_all # returns $sourced_recipes
+      # TODO
       ;;
     f) # Create list of recipe sources from an arument list
-      APP_LIST=$(cat $OPTARG)
-      #source_recipes $APP_LIST # returns $sourced_recipes
-      sourced_recipes=$APP_LIST
+      app_list=$(cat $OPTARG)
+      
+      #sourced_recipes=$APP_LIST
       ;;
     l)
       #APP_LIST=( $OPTARG )
-      
-      # Create list of recipes sources from an arument list
-      source_recipes $OPTARG # returns $sourced_recipes
-      exit 1
+      app_list=( $OPTARG )
 
       #counter=0
       #for n in ${APP_LIST[*]}; do
