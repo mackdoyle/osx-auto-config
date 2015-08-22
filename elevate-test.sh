@@ -1,28 +1,29 @@
 #!/bin/bash
 #set -x
 #set -e
+# set -o posix # Make this conform to POSIX
+set -o nounset
 # ==================================================================
 # We have lift off!
 # This is the master file that first installs any needed dependencies and begins to install and configure 
 # @TODO: Look into Bash Plugin Arch: https://code.google.com/p/b-p-a/
 # ==================================================================
 
-# Include Core Settings
+# Include Core Settings and Libs
 # ---------------------------------------------------------------------
 source config/init.cfg
-
-# Include Core library files
-# ---------------------------------------------------------------------
-echo "${BLUE}==> ${RESET}${DYELLOW}Loading core library files...${RESET}"
 source "${DIR}"/config/lib_loader.sh
-echo "${GREEN}Success.${RESET}"
+source lib/parse_getopts.sh
+
+# Begin a sudo session
+persist_sudo
 
 # Check for existing installations
 # ---------------------------------------------------------------------
-echo "${BLUE}==> ${RESET}${DYELLOW}Checking for core prerequisites...${RESET}"
+echo "${DYELLOW}==> ${BLUE}Checking for core prerequisites...${RESET}"
 
 # Check for Internet connection
-inet_check
+#inet_check
 
 # Go ahead and run 'brew update' one time if it is already installed
 # if test "$(which brew)"; then
@@ -32,21 +33,19 @@ inet_check
 
 # Ensure Homebrew and its depencies are installed before continuing
 check_essential
-echo "${GREEN}Success.${RESET}"
-
-# Begin a sudo session
-persist_sudo
+echo -e "${GREEN}You have what's needed, let's carry on.${RESET}"\\n
 
 # ---------------------------------------------------------------------
 # Install Recipes
+# Source commands for recipes should be availble as 
+# $sourced_recipes[@] as set in parse_getopts.sh
 # ---------------------------------------------------------------------
-#bash "${DIR}"/recipes/coda.sh
-#source "${DIR}"/recipes/sublime-text/sublime-text.sh
-source "${DIR}/recipes/redis/redis.sh"
 
-# Databases
-#source "${DIR}/recipes/redis/redis.sh"
-
+for recipe in ${sourced_recipes[*]}; do
+  source "$DIR/recipes/$recipe/$recipe.sh"
+  #echo "LOOPED:::::::::::::::::::::::::::::"
+done
+exit 1
 # ---------------------------------------------------------------------
 # Cleanup any messes we left behind
 # ---------------------------------------------------------------------
