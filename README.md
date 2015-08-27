@@ -61,7 +61,7 @@ To maintain finer control over apps and binaries, you can pass a file that conta
 
 ### 3. Remove anything you do not want and save it
 
-#### 4. Run `./elevte.sh -f ~/Desktop/my_file` passing your newly saved file using the `-f` option.
+### 4. Run `./elevte.sh -f ~/Desktop/my_file` passing your newly saved file using the `-f` option.
 
 ----
 
