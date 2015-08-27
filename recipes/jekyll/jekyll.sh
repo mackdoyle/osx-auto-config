@@ -4,7 +4,6 @@
 # Ruby based static website generator
 # ==================================================================
 recipe="jekyll"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

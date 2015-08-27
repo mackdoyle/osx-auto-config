@@ -5,7 +5,8 @@
 # ==================================================================
 recipe="caffeine"
 installed_name="Caffeine"
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

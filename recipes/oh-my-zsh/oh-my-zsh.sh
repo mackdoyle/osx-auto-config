@@ -6,7 +6,6 @@ recipe="zsh"
 installed_name="zsh"
 status=1
 $ZSH="${HOME}/.oh-my-zsh"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

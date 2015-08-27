@@ -1,0 +1,8 @@
+#! /usr/bin/env ruby
+
+cookbook 'git', '~> 4.3.3'
+cookbook 'java', '~> 1.35.0'
+cookbook 'java_se', '~> 8.51.2'
+cookbook 'groovy', '~> 0.0.1'
+cookbook 'gradle', '~> 1.5.1'
+cookbook 'squid', '~> 0.5.4'

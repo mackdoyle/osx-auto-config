@@ -5,7 +5,6 @@ set -o nounset
 # Network scanner
 # ==================================================================
 recipe="masscan"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

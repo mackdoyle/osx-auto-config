@@ -12,15 +12,17 @@
 # Install Using Ruby Gem
 # ------------------------------------------------------------------
 gem_install_recipe() {
-  status=1
-  local recipes=$1
+  local status=1
+  local recipe_check=""
+  local installed_name=""
+  local recipes=($1)
   set +u
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
   for recipe in ${recipes[*]}
     do
-    local recipe_check=$(which $installed_name)
+    local recipe_check=$(command -v $installed_name)
     # why not just use: if test ! $(which ${recipe}); then
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
@@ -45,9 +47,11 @@ go_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
   
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
   for recipe in ${recipes[*]}
     do
-    local recipe_check=$(which $installed_name)
+    local recipe_check=$(command -v $installed_name)
 
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
@@ -67,16 +71,17 @@ brew_install_recipe() {
   local status=1
   local recipe_check=""
   local installed_name=""
-  local recipes=($1)
+  local recipes=$1
   set +u
   test "$2" && installed_name=$2 || installed_name=$1
   set -u
   
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
   for recipe in ${recipes[*]}
     do
-    recipe_check=$(which $installed_name)
     # why not just use: if test ! $(which ${recipe}); then
-    if [[ -z "${recipe_check}" ]]; then
+    if [[ -z "$(command -v $installed_name)" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
       brew install "${recipe}"
       status=0
@@ -86,12 +91,17 @@ brew_install_recipe() {
       show_results "${recipe}" ${status}
     fi
   done
+
+  unset status
+  unset recipe_check
+  unset installed_name
+  unset recipes
+  unset recipe
 }
 
 # Install Using Homebrew Cask
 # ------------------------------------------------------------------
 brew_cask_install_recipe() {
-
   local status=1
   local recipe_check=""
   local installed_name=""
@@ -100,11 +110,12 @@ brew_cask_install_recipe() {
   test "$2" && installed_name="$2" || installed_name="$1"
   set -u
 
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
   for recipe in ${recipes[*]}
     do
-    recipe_check=$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep "$installed_name")
- 
-    if [[ -z "${recipe_check}" ]]; then
+    if [[ -z "$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep $installed_name)" ]]; then
+      echo "${BLUE}Installing ${recipe}${RESET}"
       brew cask install "${recipe}"
       status=0
       ELEVATED+=("${recipe}")
@@ -113,6 +124,12 @@ brew_cask_install_recipe() {
       show_results "${recipe}" ${status}
     fi
   done
+
+  unset status
+  unset recipe_check
+  unset installed_name
+  unset recipes
+  unset recipe
 }
 
 # Install Using Node Package Manager
@@ -126,9 +143,11 @@ npm_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
   for recipe in ${recipes[*]}
     do
-    local recipe_check=$(which ${installed_name})
+    local recipe_check=$(command -v ${installed_name})
 
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
@@ -153,9 +172,11 @@ curl_download_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
   for recipe in ${recipes[*]}
     do
-    recipe_check=$(type "${recipe}")
+    recipe_check=$(command -v "${recipe}")
 
     if test ! "${recipe_check}"; then
       echo "${BLUE}Installing ${recipe}${RESET}"

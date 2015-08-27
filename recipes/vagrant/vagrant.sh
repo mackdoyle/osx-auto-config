@@ -4,8 +4,8 @@ set -o nounset
 # OS X Vagrant Setup
 # ==================================================================
 recipe="vagrant"
+installed_anme="vagrant"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------
@@ -15,5 +15,5 @@ echo "Prerequisite check complete."
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_cask_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
+brew_cask_install_recipe ${recipe} ${installed_name}
 

@@ -7,7 +7,7 @@ recipe="xcode-select"
 installed_name="xcode-select"
 [[ -z "${DIR}" ]] && DIR=$1
 status=1
-echo "Beginning ${recipe} installation"
+
 recipe_check="$(type ${recipe})"
 
 # Install Recipe

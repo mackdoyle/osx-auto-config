@@ -5,7 +5,6 @@
 # ==================================================================
 recipe="spectacle"
 installed_name="Spectacle"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

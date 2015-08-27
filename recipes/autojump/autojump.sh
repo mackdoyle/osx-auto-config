@@ -3,7 +3,9 @@
 # OS X Auto Jump Installation
 # ==================================================================
 recipe="autojump"
-echo "Beginning $recipe installation"
+installed_name="autojump"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------
@@ -11,5 +13,5 @@ check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_install_recipe ${recipe} # returns install_status=0 or 1
+brew_install_recipe ${recipe} ${installed_name}
 

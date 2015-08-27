@@ -4,7 +4,8 @@
 # ==================================================================
 recipe="alfred"
 installed_name="Alfred 2"
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

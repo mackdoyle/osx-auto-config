@@ -5,7 +5,6 @@
 recipe="grunt-cli"
 installed_name="grunt"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

@@ -5,7 +5,6 @@
 recipe="google-chrome"
 installed_name="Google Chrome"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

@@ -4,7 +4,8 @@
 # ==================================================================
 recipe="bower"
 installed_name="bower"
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

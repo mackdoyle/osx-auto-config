@@ -9,7 +9,8 @@ installed=""
 
 # Check for existing installations
 # ###############################################################################
-echo "Beginning $recipe installation"
+
+
 echo "Checking for prerequisites..."
 ynPYGMENTS=$(type pygmentize)
 

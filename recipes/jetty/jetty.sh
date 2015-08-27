@@ -5,7 +5,6 @@
 # for SPDY, WebSocket, OSGi, JMX, JNDI, JAAS and many other integrations.
 # ==================================================================
 recipe="jetty"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

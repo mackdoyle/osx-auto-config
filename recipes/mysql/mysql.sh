@@ -4,7 +4,6 @@
 # ==================================================================
 recipe="mysql"
 installed_name="mysql"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

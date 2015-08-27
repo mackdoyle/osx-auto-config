@@ -381,7 +381,7 @@ h5 {
 
 h6 {
     font-size: .5em;
-    color: #777
+    color: #777;
 }
 
 p {
@@ -397,17 +397,27 @@ hr {
 }
 
 ul,ol {
-    padding-left: 2em
+    padding-left: 2em;
+}
+
+ol {
+    padding-left: 2em;
+    font-size: 125%;
+    font-weight: bold;
+}
+
+ol ol, ul ol {
+    font-size: 100%;
 }
 
 ul.no-list,ol.no-list {
     padding: 0;
-    list-style-type: none
+    list-style-type: none;
 }
 
 ul ul,ul ol,ol ol,ol ul {
     margin-top: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 li>p {
@@ -415,7 +425,7 @@ li>p {
 }
 
 dl {
-    padding: 0
+    padding: 0;
 }
 
 dl dt {
@@ -423,7 +433,7 @@ dl dt {
     margin-top: 16px;
     font-size: 1em;
     font-style: italic;
-    font-weight: bold
+    font-weight: bold;
 }
 
 dl dd {
@@ -439,15 +449,15 @@ blockquote,ul,ol,dl,table,pre {
 blockquote {
     padding: 0 15px;
     color: #777;
-    border-left: 4px solid #ddd
+    border-left: 4px solid #ddd;
 }
 
 blockquote>:first-child {
-    margin-top: 0
+    margin-top: 0;
 }
 
 blockquote>:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 table {
@@ -455,16 +465,16 @@ table {
     width: 100%;
     overflow: auto;
     word-break: normal;
-    word-break: keep-all
+    word-break: keep-all;
 }
 
 table th {
-    font-weight: bold
+    font-weight: bold;
 }
 
 table th,table td {
     padding: 6px 13px;
-    border: 1px solid #ddd
+    border: 1px solid #ddd;
 }
 
 table tr {

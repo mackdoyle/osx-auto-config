@@ -3,7 +3,6 @@
 # OS X iTerm2 Setup
 # ==================================================================
 recipe="iterm2"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

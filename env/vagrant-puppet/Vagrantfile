@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+#
+# ==================================================================
+# Vagrant configuration for vagrant-java on Ubuntu 14.4
+# ==================================================================
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  # Forward ports
+  config.vm.network :forwarded_port, guest: 8080, host: 8080    # Java app server
+  config.vm.network :forwarded_port, guest: 5432, host: 5432    # DB
+
+  # Share the working dir - host, guest
+  config.vm.synced_folder "project", "/vagrant"
+  config.vm.synced_folder "puppet/modules", "/puppet"
+
+  config.vm.provision "shell", inline: "apt-get update --fix-missing"
+
+  config.vm.provision :puppet do |puppet|
+     puppet.manifests_path  = "puppet/manifests"
+     puppet.manifest_file   = "base.pp"
+     puppet.module_path     = "puppet/modules"
+     puppet.options         = "--verbose"
+  end
+end

@@ -4,7 +4,6 @@
 # ==================================================================
 recipe="redis"
 installed_name="redis-server"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

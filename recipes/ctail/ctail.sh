@@ -4,7 +4,8 @@
 # Tail logs across multiple clustered servers
 # ==================================================================
 recipe="ctail"
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

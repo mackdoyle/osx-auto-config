@@ -62,7 +62,7 @@ check_virtualbox() {
 # Check for XCode CLI
 # ----------------------------------------------------------------------
 check_xcode() {
-  type xcode-select >/dev/null 2>&1 || { echo >&2 "${YELLOW}XCode not found. Attempting to install it for you${RESET}"; source "${DIR}"/recipes/xcode-cli/xcode-cli.sh; }
+  type xcode-select >/dev/null 2>&1 || { echo >&2 "${YELLOW}XCode not found. Attempting to install it for you${RESET}"; source "${DIR}"/sys/xcode-cli/xcode-cli.sh; }
 }
 
 # Check for essential prereqs with one call
