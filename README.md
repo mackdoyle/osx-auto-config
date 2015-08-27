@@ -20,7 +20,7 @@ Don't hesitate. You know you want to elevate.
 ### 2. Launch Terminal and change into the project's root folder
 
 ```bash
-cd ~/Downloads/osx-auto-config
+cd ~/Downloads/elevate
 ```
 
 ### 3. Run the script
@@ -34,7 +34,7 @@ This script supports multiple installation options:
 -s Show all supported applications.
 -h Show help.
 ```
-To run the default, and install an opinionated selection of apps, execute the following command from within the `auto-osx-config` directory.
+To run the default, and install an opinionated selection of apps, execute the following command from within the `elevate` directory.
 
 ```bash
 ./elevate.sh -a
@@ -45,6 +45,8 @@ To run the default, and install an opinionated selection of apps, execute the fo
 ```bash
 sudo chmod -R 755 *
 ```
+
+----
 
 ## Selectively Installing and Configuring
 To maintain finer control over apps and binaries, you can pass a file that contains only the items you want installed.
@@ -60,6 +62,8 @@ To maintain finer control over apps and binaries, you can pass a file that conta
 ### 3. Remove anything you do not want and save it
 
 #### 4. Run `./elevte.sh -f ~/Desktop/my_file` passing your newly saved file using the `-f` option.
+
+----
 
 ## List of Supported Apps
 This tool manages the installation of the following apps. All are optional with the exception of the core services
