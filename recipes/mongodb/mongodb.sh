@@ -4,7 +4,6 @@
 # ==================================================================
 recipe="mongodb"
 installed_name="mongo"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

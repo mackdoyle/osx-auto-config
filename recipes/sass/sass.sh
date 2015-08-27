@@ -5,7 +5,6 @@
 # ==================================================================
 recipe="sass"
 installed_name="sass"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

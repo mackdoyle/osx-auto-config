@@ -19,9 +19,9 @@ get_user_info() {
   # Get name and email for use later, like when configuring Git global config.
   echo -e \\n"${YELLOW}Please provide some info we can use in configuration files.${RESET}"
   
-  echo -ne "Enter your full name and hit [ENTER] "\\n
+  echo -ne "Enter your FULL NAME and hit [ENTER] "\\n
   read user_name
   
-  echo -ne "Enter an email address and hit [ENTER] "\\n
+  echo -ne "Enter an EMAIL ADDRESS and hit [ENTER] "\\n
   read user_email
 }

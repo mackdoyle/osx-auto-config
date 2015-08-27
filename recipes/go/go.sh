@@ -4,7 +4,6 @@
 # ==================================================================
 recipe="go"
 installed_name="go"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

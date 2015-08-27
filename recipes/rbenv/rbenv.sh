@@ -3,7 +3,6 @@
 # RubyEnv Installation
 # ==================================================================
 recipe="rbenv ruby-build"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

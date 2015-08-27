@@ -4,7 +4,6 @@
 # ==================================================================
 recipe="git"
 installed_name="git"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

@@ -4,7 +4,8 @@
 # ==================================================================
 recipe="airmail-amt"
 installed_name="Airmail"
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

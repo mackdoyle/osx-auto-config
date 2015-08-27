@@ -5,7 +5,6 @@
 # https://stedolan.github.io/jq/
 # ==================================================================
 recipe="jq"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

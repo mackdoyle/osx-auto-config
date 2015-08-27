@@ -5,7 +5,6 @@
 recipe="sublime-text"
 installed_name="Sublime Text"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

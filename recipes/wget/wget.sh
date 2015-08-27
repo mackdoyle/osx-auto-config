@@ -5,7 +5,6 @@
 # ==================================================================
 recipe="wget"
 installed_name="wget"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

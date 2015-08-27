@@ -3,7 +3,6 @@
 # Vim Installation
 # ==================================================================
 recipe="vim"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ---------------------------------------------------------------------

@@ -2,10 +2,9 @@
 # =====================================================================
 # SPF-13 flavor of Vim for OS X Installation
 # =====================================================================
-
 recipe="SPF-13"
 status=1
-echo "Beginning $recipe installation"
+
 recipe_check="$(find ~ | grep -i "spf")"
 
 # Check for existing installations

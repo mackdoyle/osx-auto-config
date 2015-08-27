@@ -5,7 +5,8 @@
 # ==================================================================
 recipe="coda"
 installed_name="Coda 2"
-echo "Beginning $recipe installation"
+
+
 
 # Install Dependencies
 # ------------------------------------------------------------------

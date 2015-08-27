@@ -5,7 +5,8 @@
 recipe="yeoman"
 installed_name="yo"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
+
+
 
 # Check for existing installations
 # ------------------------------------------------------------------

@@ -5,7 +5,6 @@
 recipe="emacs"
 installed_name="emacs"
 [[ -z "${DIR}" ]] && DIR=$1
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

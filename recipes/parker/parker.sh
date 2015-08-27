@@ -5,7 +5,6 @@
 # reports on their complexity.
 # ==================================================================
 recipe="parker"
-echo "Beginning $recipe installation"
 
 # Check for existing installations
 # ------------------------------------------------------------------

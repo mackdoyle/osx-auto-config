@@ -18,18 +18,20 @@ check_xcode
 # ------------------------------------------------------------------
 if test ! "$(which brew)"; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  # Install some Homebrew essentials while we are at it
-  brew install bash-completion
-  brew install bash-git-prompt
-
   status=0
 fi
 
 # Tap the main repositories
 # ------------------------------------------------------------------
-brew tap homebrew/dupes; brew tap homebrew/versions;
+brew tap homebrew/dupes
+brew tap homebrew/versions
 brew cleanup
+
+# Install some Homebrew essentials while we are at it
+# ------------------------------------------------------------------
+brew install bash-completion
+brew install bash-git-prompt
+brew install homebrew/dupes/grep
 
 # Display Installation results
 # ------------------------------------------------------------------

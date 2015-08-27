@@ -18,7 +18,8 @@ if ( "${npm_loc}" == "${HOME}" ) then
   echo "Skipping $recipe installation"
   status=0
 else
-  echo "Beginning $recipe installation"
+  
+
   status=1
 fi
 

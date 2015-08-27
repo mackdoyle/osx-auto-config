@@ -3,24 +3,16 @@
 # Delimiter to Array
 # Takes a list and a delimiter and converts it to a Bash array
 #
-# This script works by redefining the built-in IFS variable to the delimiter 
-# character and assign the values to a new variable using the 
-# array=($<string_var>), and then reseting IFS back to its original state.. 
+# To understand how this works, see: 
+# http://unix.stackexchange.com/questions/224548/bash-change-variable-contents-in-a-function-that-receives-the-variable-name-as
 # ======================================================================
 
-# delim_to_array() {}
+# delim_to_array() {Returns the list passed in but converted to an array}
 # ----------------------------------------------------------------------
-
 delim_to_array() {
-  local list=$1
-  local delim=$2
-  local oifs=$IFS;
-  
-  IFS="$delim ";
-  delim_to_array_=($list);
-  IFS=$oifs;
-
-  #echo "${delim_to_array_[*]}"
+        local IFS="${2:-$' :|'}"
+        # printf "inside  IFS=<%s>\n" "$IFS"
+        eval $1\=\(${!1}\);
 }
 
 
