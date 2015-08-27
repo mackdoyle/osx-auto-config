@@ -28,7 +28,8 @@ This script supports multiple installation options:
 ```bash
 -a Provisions OS X with an opinionated selection of apps. For example, it will install node-sass instead of sass, etc.
 -f <FILE> Pass a file that contains a line delimited list of apps to install and configure.
--l List all currently supported apps.
+-l <LIST> Pass a space delimited list, in quotes, of apps to install and configure.
+-s Show all supported applications.
 -h Show help.
 ```
 To run the default, and install an opinionated selection of apps, execute the following command from within the `auto-osx-config` directory.
@@ -43,6 +44,20 @@ To run the default, and install an opinionated selection of apps, execute the fo
 sudo chmod -R 755 *
 ```
 
+## Selectively Installing and Configuring
+To maintain finer control over apps and binaries, you can pass a file that contains only the items you want installed.
+
+### 1. Run `./elevate.sh -s` to get a list of all supported apps.
+
+![](docs/assets/show-all.png)
+
+### 2. Copy the list and paste it into a file
+
+![](docs/assets/file-list.png)
+
+### 3. Remove anything you do not want and save it
+
+#### 4. Run `./elevte.sh -f ~/Desktop/my_file` passing your newly saved file using the `-f` option.
 
 ## List of Supported Apps
 This tool manages the installation of the following apps. All are optional with the exception of the core services
