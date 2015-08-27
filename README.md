@@ -11,7 +11,9 @@ Don't hesitate. You know you want to elevate.
 ## Installation
 
 
-### 1. Download the script and unpack it: [https://github.com/mackdoyle/osx-auto-config/archive/master.zip]()
+### 1. Download the script and unpack it 
+
+[https://github.com/mackdoyle/osx-auto-config/archive/master.zip]()
 
 *(Alternatively, if you already have Git installed, you can clone the repo: [git clone  git@github.com:mackdoyle/osx-auto-config.git ~/Downloads]())*
 
