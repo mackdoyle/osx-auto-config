@@ -225,6 +225,8 @@ Elevate will configure your OS X with the following settings.
 * Only use UTF-8 in Terminal.app/iTerm.
 * Auto-focus terminal on mouse hover (Doesn't seem to be supported anymore but leaving in place as a desparate hope it comes back)
 
+## SSH
+Elevate will generate your RSA Keys and Authorized Hosts file, if they do not alrady exist. 
 
 ## Coming Soon
 List of features to be added

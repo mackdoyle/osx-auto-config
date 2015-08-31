@@ -20,6 +20,8 @@ gem_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
+  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+  
   for recipe in ${recipes[*]}
     do
     local recipe_check=$(command -v $installed_name)
