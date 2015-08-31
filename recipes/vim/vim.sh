@@ -10,5 +10,4 @@ check_homebrew
 
 # Install Sublime Text
 # ---------------------------------------------------------------------
-echo "Installing $recipe"
-brew_install_recipe ${recipe}
+brew_install_recipe ${recipe} ${recipe}

@@ -32,14 +32,14 @@ echo "${DYELLOW}==> ${BLUE}Checking for core prerequisites...${RESET}"
 inet_check
 
 # Go ahead and run 'brew update' one time if it is already installed
- #if test "$(command -v brew)"; then
- #  echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
- #  brew update
- #fi
+ if test "$(command -v brew)"; then
+   echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
+   brew update
+ fi
 
 # Ensure Homebrew and its depencies are installed before continuing
-#check_essential
-#echo -e "${GREEN}You have what's needed, let's carry on.${RESET}"\\n
+check_essential
+echo -e "${GREEN}You have what's needed, let's carry on.${RESET}"\\n
 
 # ---------------------------------------------------------------------
 # Install Recipes
@@ -73,7 +73,7 @@ done
 echo -e "${BLUE}==> ${RESET}${GREEN}Begging OS X System Configuration${RESET}"
 source ${DIR}/sys/ssh/ssh.sh
 source ${DIR}/sys/osx/osx.sh
-
+  
 # ---------------------------------------------------------------------
 # Run Report
 # ---------------------------------------------------------------------

@@ -20,7 +20,7 @@ gem_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
-  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+  echo "Beginning ${BLUE}$recipe${RESET} installation"
   
   for recipe in ${recipes[*]}
     do
@@ -49,7 +49,7 @@ go_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
   
-  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+  echo "Beginning ${BLUE}$recipe${RESET} installation"
 
   for recipe in ${recipes[*]}
     do
@@ -112,7 +112,7 @@ brew_cask_install_recipe() {
   test "$2" && installed_name="$2" || installed_name="$1"
   set -u
 
-  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+  echo "Beginning ${BLUE}$recipe${RESET} installation"
 
   for recipe in ${recipes[*]}
     do
@@ -145,7 +145,7 @@ npm_install_recipe() {
   test "$2" && local installed_name=$2 || local installed_name=$1
   set -u
 
-  echo "Beginning ${BLUE}$installed_name${RESET} installation"
+  echo "Beginning ${BLUE}$recipe${RESET} installation"
 
   for recipe in ${recipes[*]}
     do

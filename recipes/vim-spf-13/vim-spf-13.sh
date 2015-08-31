@@ -7,6 +7,8 @@ status=1
 
 # Install SPF-13
 # ---------------------------------------------------------------------
+echo "Beginning ${BLUE}$installed_name${RESET} installation"
+
 spf_check="$(ls ${HOME}/.spf13*)"
 if [ -z "${spf_check}" ]; then
   echo "${BLUE}Installing ${recipe}${RESET}"

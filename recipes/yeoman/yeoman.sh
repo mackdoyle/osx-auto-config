@@ -2,20 +2,16 @@
 # ==================================================================
 # OS X Yeoman Installation
 # ==================================================================
-recipe="yeoman"
+recipe="yo"
 installed_name="yo"
-[[ -z "${DIR}" ]] && DIR=$1
-
-
 
 # Check for existing installations
 # ------------------------------------------------------------------
-source ${DIR}/lib/dependency_check.sh
 check_npm
 
 # Install Recipe
 # ------------------------------------------------------------------
-npm_install_recipe ${recipe}
+npm_install_recipe ${recipe} ${installed_name}
 
 
 
