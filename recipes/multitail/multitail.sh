@@ -4,6 +4,7 @@
 # Enhanced log tailing
 # ==================================================================
 recipe="multitail"
+installed_name="multitail"
 
 
 
@@ -13,6 +14,6 @@ check_homebrew
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_install_recipe ${recipe} # returns install_status=0 (Success) or 1 (Fail)
+brew_install_recipe ${recipe} ${installed_name}
 
 
