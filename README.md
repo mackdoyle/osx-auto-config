@@ -2,7 +2,7 @@
 
 ![](docs/assets/iterm.png)
 
-Install apps, manage dotfiles and set default app and system configurations with a single command. Elevate can be used to quicky provision a developer machine or pimp out or existing bland environment. Just run $elevate -a and begin empressing your friend(s).
+Install apps, manage dotfiles and set default app and system configurations with a single command. Elevate can be used to quicky provision a developer machine or pimp out an existing bland environment. Just run $elevate -a and begin impressing your friend(s).
 
 So what does it do exactly? Elevate harnesses great tools like Bundler, cURL, Gem, Go, Hombrew, Homebrew Cask, npm, pip and wget to provision all the tools you need for most development environments. Next, it creates opinionated .dotfiles for the tools you install as well as predefined preferences and plugins to give you the most an app can offer. Finally, it processes a set of OS X system defaults to provide a more powerful environment for developer workflows.
 

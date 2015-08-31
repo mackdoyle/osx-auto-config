@@ -5,7 +5,7 @@
 # reports on their complexity.
 # ==================================================================
 recipe="parker"
-installed_name="parker"
+
 
 # Check for existing installations
 # ------------------------------------------------------------------
@@ -13,7 +13,7 @@ check_npm
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_install_recipe ${recipe} ${installed_name}
+brew_install_recipe ${recipe} ${recipe}
 
 
 

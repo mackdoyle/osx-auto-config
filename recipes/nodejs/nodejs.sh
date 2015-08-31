@@ -27,7 +27,7 @@ else
     if [ -z "${NPMRC}" ]; then
       mkdir -p "${HOME}/.npmrc"
       if [ $? -ne 0 ]; then
-        echo "failed to mkdir ${HOME}/.npmrc. Try executing: sudo chmod -R 755 ${HOME}/.npmrc" >&2
+        echo "${RED}Failed to mkdir ${HOME}/.npmrc. Try executing: sudo chmod -R 755 ${HOME}/.npmrc${RESET}" >&2
         exit 1
       fi
 

@@ -25,7 +25,7 @@ gem_install_recipe() {
   for recipe in ${recipes[*]}
     do
     local recipe_check=$(command -v $installed_name)
-    # why not just use: if test ! $(which ${recipe}); then
+  
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
       sudo gem install "${recipe}"
@@ -82,10 +82,10 @@ brew_install_recipe() {
 
   for recipe in ${recipes[*]}
     do
-    # why not just use: if test ! $(which ${recipe}); then
+    # alternative: if test ! $(command -v ${recipe}); then
     if [[ -z "$(command -v $installed_name)" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      brew install "${recipe}"
+      brew install "${recipe}" --quiet
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
@@ -116,9 +116,9 @@ brew_cask_install_recipe() {
 
   for recipe in ${recipes[*]}
     do
-    if [[ -z "$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep $installed_name)" ]]; then
+    if [[ -z "$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep $installed_name)" && -z "$(command -v $installed_name)" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      brew cask install "${recipe}"
+      brew cask install "${recipe}" --quiet
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
