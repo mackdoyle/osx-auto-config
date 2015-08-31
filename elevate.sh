@@ -32,10 +32,10 @@ echo "${DYELLOW}==> ${BLUE}Checking for core prerequisites...${RESET}"
 inet_check
 
 # Go ahead and run 'brew update' one time if it is already installed
- if test "$(command -v brew)"; then
-   echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
-   brew update
- fi
+ #if test "$(command -v brew)"; then
+ #  echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
+ #  brew update
+ #fi
 
 # Ensure Homebrew and its depencies are installed before continuing
 check_essential
@@ -59,7 +59,7 @@ cleanup_install_files
 # ---------------------------------------------------------------------
 # Begin Configuration of installed binaries
 # ---------------------------------------------------------------------
-echo -e "${BLUE}==> ${RESET}${GREEN}Begging configuration of installed apps and binaries${RESET}"
+echo -e "${BLUE}==> ${RESET}${GREEN}Beginning configuration of installed apps and binaries${RESET}"
 
 for app in ${INSTALLED[*]}; do
   # Only source the config file if it exists
@@ -70,7 +70,7 @@ done
 # ---------------------------------------------------------------------
 # Begin Configuration of OS X System Settings
 # ---------------------------------------------------------------------
-echo -e "${BLUE}==> ${RESET}${GREEN}Begging OS X System Configuration${RESET}"
+echo -e "${BLUE}==> ${RESET}${GREEN}Beginning OS X System Configuration${RESET}"
 source ${DIR}/sys/ssh/ssh.sh
 source ${DIR}/sys/osx/osx.sh
   
