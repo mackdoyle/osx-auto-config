@@ -71,6 +71,7 @@ done
 # Begin Configuration of OS X System Settings
 # ---------------------------------------------------------------------
 echo -e "${BLUE}==> ${RESET}${GREEN}Begging OS X System Configuration${RESET}"
+source ${DIR}/sys/ssh/ssh.sh
 source ${DIR}/sys/osx/osx.sh
 
 # ---------------------------------------------------------------------
