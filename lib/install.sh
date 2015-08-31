@@ -151,7 +151,7 @@ npm_install_recipe() {
 
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      npm install -g "${recipe}"
+      npm install -g "${recipe}" --silent
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}

@@ -3,6 +3,7 @@
 # OS X Kubernetes-cli Setup
 # ==================================================================
 recipe="kubernetes-cli"
+installed_name="kubernetes"
 
 # Check for existing installations
 # ------------------------------------------------------------------

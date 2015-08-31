@@ -2,15 +2,16 @@
 # ==================================================================
 # OS X Oh My Zsh Installation
 # ==================================================================
-recipe="zsh"
-installed_name="zsh"
+recipe="oh-my-zsh"
+installed_name="oh-my-zsh"
 status=1
-$ZSH="${HOME}/.oh-my-zsh"
+ZSH="${HOME}/.oh-my-zsh"
+echo -e "Beginning ${BLUE}${recipe}${RESET}  installation"\\n
 
 # Check for existing installations
 # ------------------------------------------------------------------
 check_git
-recipe_check=$(which $installed_name)
+recipe_check=$(command -v zsh)
 
 # Install Recipe
 # ------------------------------------------------------------------

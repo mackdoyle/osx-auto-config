@@ -12,7 +12,7 @@ installed=""
 
 
 echo "Checking for prerequisites..."
-ynPYGMENTS=$(type pygmentize)
+ynPYGMENTS=$(command -v pygmentize)
 
 # Check for easy_install. If not found redirect to the Python recipe which will runa routine that includes it.
 type easy_install >/dev/null 2>&1 || { echo >&2 "Easy Install not found. Attempting to install it for you"; bash $(DIR)/scripts/python.sh; }

@@ -14,35 +14,33 @@ check_homebrew
 
 # Let's check if npm is installed and if so, where its installs modules
 npm_loc=$( cd "$( dirname "$(npm config get prefix)" )" && pwd )
-if ( "${npm_loc}" == "${HOME}" ) then
-  echo "Skipping $recipe installation"
+
+if [ "${npm_loc}" == "${HOME}" ]; then
+  echo -e "${YELLOW}NPM and Node already installed Seperately. Skipping $recipe installation${RESET}"\\n
   status=0
 else
-  
+  # Install Recipe
+  # ------------------------------------------------------------------
+  if [[ ${status} -eq 1 ]]; then
+    # Lets install node and npm separately if .npmrc does not already exist
+    NPMRC="$(ls ${HOME}/.npmrc)"
+    if [ -z "${NPMRC}" ]; then
+      mkdir -p "${HOME}/.npmrc"
+      if [ $? -ne 0 ]; then
+        echo "failed to mkdir ${HOME}/.npmrc. Try executing: sudo chmod -R 755 ${HOME}/.npmrc" >&2
+        exit 1
+      fi
 
-  status=1
+      brew install node --without-npm
+      echo prefix=~/.node >> ~/.npmrc
+      curl -L https://www.npmjs.org/install.sh | sh
+
+      status=0
+    fi
+  fi
 fi
 
-# Install Recipe
-# ------------------------------------------------------------------
-if [[ ${status} -eq 1 ]]; then
-  # Lets install node and npm separately
-  mkdir ${HOME}/.npmrc
-if [ $? -ne 0 ]; then
-  echo "failed to mkdir ${HOME}/.npmrc. Try executing: sudo chmod -R 755 ${HOME}/.npmrc" >&2
-  exit 1
-fi
 
-  brew install node --without-npm
-  echo prefix=~/.node >> ~/.npmrc
-  curl -L https://www.npmjs.org/install.sh | sh
-
-  # Add path to bash and zsh
-  echo -e "\n# Nodejs Paths" >> ".bash_profile"
-  echo -e "\nPATH=${HOME}/.node/bin:$PATH" >> ".bash_profile"
-  echo -e "\n# Nodejs Paths" >> ".zshrc"
-  echo -e "\nPATH=${HOME}/.node/bin:$PATH" >> ".zshrc"
-fi
 
 
 
