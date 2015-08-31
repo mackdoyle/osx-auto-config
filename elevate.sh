@@ -68,6 +68,12 @@ for app in ${INSTALLED[*]}; do
 done
 
 # ---------------------------------------------------------------------
+# Begin Configuration of OS X System Settings
+# ---------------------------------------------------------------------
+echo -e "${BLUE}==> ${RESET}${GREEN}Begging OS X System Configuration${RESET}"
+source ${DIR}/sys/osx/osx.sh
+
+# ---------------------------------------------------------------------
 # Run Report
 # ---------------------------------------------------------------------
 source "${DIR}"/config/exit.cfg
