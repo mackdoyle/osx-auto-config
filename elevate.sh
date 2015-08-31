@@ -55,12 +55,23 @@ done
 echo "${BLUE}==> ${RESET}${DYELLOW}Cleaning up temporary files...${RESET}"
 cleanup_install_files
 
+
+# ---------------------------------------------------------------------
+# Begin Configuration of installed binaries
+# ---------------------------------------------------------------------
+echo -e "${BLUE}==> ${RESET}${GREEN}Begging configuration of installed apps and binaries${RESET}"
+
+for app in ${INSTALLED[*]}; do
+  # Only source the config file if it exists
+  CFG="$(ls ${DIR}/recipes/$app/*cfg)"
+  [ -n "${CFG}" ] && source "$DIR/recipes/$app/$app.cfg" && echo "$app configured successfully."
+done
+
 # ---------------------------------------------------------------------
 # Run Report
 # ---------------------------------------------------------------------
 source "${DIR}"/config/exit.cfg
-echo -e "${GREEN}The following app where successfully installed...${RESET}"
-echo -e "${ELEVATED}"
-
+echo -e "${BLUE}==> ${RESET}${GREEN}The following apps where successfully installed and configured...${RESET}"
+echo -e "${INSTALLED}"
 
 exit $?

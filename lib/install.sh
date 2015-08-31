@@ -28,7 +28,7 @@ gem_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       sudo gem install "${recipe}"
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -57,7 +57,7 @@ go_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       go get "${recipe}"
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -85,7 +85,7 @@ brew_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       brew install "${recipe}"
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -118,7 +118,7 @@ brew_cask_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       brew cask install "${recipe}"
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -153,7 +153,7 @@ npm_install_recipe() {
       echo "${BLUE}Installing ${recipe}${RESET}"
       npm install -g "${recipe}"
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
     else
       show_results "${recipe}" ${status}
@@ -183,7 +183,7 @@ curl_download_recipe() {
       curl -q "${recipe}" -0 "${DIR}/tmp"
       # NEED TO ADD METHOD OF AUTO INSTALLING AFTER DOWNLOAD
       status=0
-      ELEVATED+=("${recipe}")
+      INSTALLED+=("${recipe}")
     fi
   done
 }

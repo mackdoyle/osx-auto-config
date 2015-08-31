@@ -8,10 +8,10 @@ installed_name="grunt"
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_homebrew
+check_node
 
 # Install Recipe
 # ------------------------------------------------------------------
-brew_install_recipe ${recipe}
+node_install_recipe ${recipe}
 
 

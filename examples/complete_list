@@ -2,6 +2,7 @@ airmail
 alfred
 amethyst
 autojump
+bfg
 bower
 caffeine
 cliclick
@@ -10,11 +11,16 @@ dash
 dropbox
 go
 google-chrome
+gradle
+grunt-cli
 iterm2
 jekyll
+jetty
 jq
 kubernetes-cli
 masscan
+mongodb
+mysql
 nodejs
 oh-my-zsh
 parker
@@ -23,9 +29,12 @@ python3
 python-extra
 rbenv
 redis
+ruby
 sass
+scala
 spectacle
 ssh
+sublime-text
 vagrant
 vim
 vim-spf-13
