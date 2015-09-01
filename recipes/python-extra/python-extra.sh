@@ -1,11 +1,16 @@
-# OS X Python Extra Components Setup
+#!/bin/bash
+# ==================================================================
+# Python Extras Installation
+# ==================================================================
+recipe="python-extras"
 
-# Assumes: 
-# + Homebrew has been installed correctly.
-# + Homebrew-cask has been tapped and installed correctly.
+
+# Check for existing installations
+# ------------------------------------------------------------------
+check_homebrew
+
+# Install Recipe
+# ------------------------------------------------------------------
+brew_install_recipe ${recipe} ${recipe}
 
 
-# Heroku Toolbelt
-###############################################################################
-# Includes the Heroku client and foreman
-brew install heroku-toolbelt

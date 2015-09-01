@@ -80,7 +80,5 @@ source ${DIR}/sys/osx/osx.cfg
 # Run Report
 # ---------------------------------------------------------------------
 source "${DIR}"/config/exit.cfg
-echo -e "${BLUE}==> ${RESET}${GREEN}The following apps where successfully installed and configured...${RESET}"
-echo -e "${INSTALLED}"
 
 exit $?
