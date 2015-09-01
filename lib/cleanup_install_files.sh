@@ -9,10 +9,10 @@ set -o nounset
 # ----------------------------------------------------------------------
 cleanup_install_files() {
   if [[ -n $(type brew) ]]; then
-    brew doctor >/dev/null
-    brew cleanup >/dev/null
-    brew prune >/dev/null
-    brew cask cleanup >/dev/null
+    brew doctor --quiet >/dev/null
+    brew cleanup --quiet >/dev/null
+    brew prune --quiet >/dev/null
+    brew cask cleanup --quiet >/dev/null
     echo "Brew Cleaned"
   fi
 

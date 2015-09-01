@@ -61,18 +61,20 @@ cleanup_install_files
 # ---------------------------------------------------------------------
 echo -e "${BLUE}==> ${RESET}${GREEN}Beginning configuration of installed apps and binaries${RESET}"
 
-for app in ${INSTALLED[*]}; do
+for recipe_cfg in ${INSTALLED[*]}; do
   # Only source the config file if it exists
-  CFG="$(ls ${DIR}/recipes/$app/*cfg)"
-  [ -n "${CFG}" ] && source "$DIR/recipes/$app/$app.cfg" && echo "$app configured successfully."
+  if [ -e "${DIR}/recipes/${recipe_cfg}/${recipe_cfg}.cfg" ]; then 
+    source "${DIR}/recipes/${recipe_cfg}/${recipe_cfg}.cfg" 
+    echo "${recipe_cfg} configured successfully."
+  fi
 done
 
 # ---------------------------------------------------------------------
 # Begin Configuration of OS X System Settings
 # ---------------------------------------------------------------------
 echo -e "${BLUE}==> ${RESET}${GREEN}Beginning OS X System Configuration${RESET}"
-source ${DIR}/sys/ssh/ssh.sh
-source ${DIR}/sys/osx/osx.sh
+source ${DIR}/sys/ssh/ssh.cfg
+source ${DIR}/sys/osx/osx.cfg
   
 # ---------------------------------------------------------------------
 # Run Report
