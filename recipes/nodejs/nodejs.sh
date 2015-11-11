@@ -7,7 +7,7 @@
 # ==================================================================
 recipe="node"
 status=1
-
+echo "Beginning ${BLUE}$recipe${RESET} installation"
 # Check for existing installations
 # ------------------------------------------------------------------
 check_homebrew

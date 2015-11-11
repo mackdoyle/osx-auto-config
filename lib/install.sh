@@ -85,7 +85,7 @@ brew_install_recipe() {
     # alternative: if test ! $(command -v ${recipe}); then
     if [[ -z "$(command -v $installed_name)" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      brew install "${recipe}" --quiet
+      brew install ${recipe} --quiet
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
@@ -118,7 +118,7 @@ brew_cask_install_recipe() {
     do
     if [[ -z "$(mdfind kMDItemContentTypeTree=com.apple.application-bundle | grep $installed_name)" && -z "$(command -v $installed_name)" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      brew cask install "${recipe}" --quiet
+      brew cask install ${recipe} --quiet
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}

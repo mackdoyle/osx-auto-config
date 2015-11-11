@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -o nounset   
+#set -o nounset   
 set -o errexit # Note: add `|| true` to commands that you allow to fai
 #set -o xtrace
 
@@ -32,10 +32,10 @@ echo "${DYELLOW}==> ${BLUE}Checking for core prerequisites...${RESET}"
 inet_check
 
 # Go ahead and run 'brew update' one time if it is already installed
- if test "$(command -v brew)"; then
-   echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
-   brew update
- fi
+ #if test "$(command -v brew)"; then
+ #  echo "Homebrew installed. Let's go ahead and run ${GREEN}brew update${RESET}"
+ #  brew update
+ #fi
 
 # Ensure Homebrew and its depencies are installed before continuing
 check_essential

@@ -7,7 +7,7 @@
 # ==================================================================
 recipe="node"
 status=1
-
+echo "Beginning ${BLUE}$recipe${RESET} installation"
 # A word about this shell script:
 #
 # It must work everywhere, including on systems that lack
