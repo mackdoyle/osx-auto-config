@@ -124,7 +124,7 @@ easy_install_recipe() {
 
     if [[ -z "${recipe_check}" ]]; then
       echo "${BLUE}Installing ${recipe}${RESET}"
-      easy_install "${recipe}" --silent
+      easy_install "${recipe}" --quiet
       status=0
       INSTALLED+=("${recipe}")
       show_results "${recipe}" ${status}
