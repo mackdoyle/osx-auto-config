@@ -11,4 +11,4 @@ check_npm
 
 # Install Recipe
 # ------------------------------------------------------------------
-node_install_recipe ${recipe} ${installed_name}
+nmp_install_recipe ${recipe} ${installed_name}
