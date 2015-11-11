@@ -4,14 +4,11 @@
 # ==================================================================
 recipe="grunt-cli"
 installed_name="grunt"
-[[ -z "${DIR}" ]] && DIR=$1
 
 # Check for existing installations
 # ------------------------------------------------------------------
-check_node
+check_npm
 
 # Install Recipe
 # ------------------------------------------------------------------
-node_install_recipe ${recipe}
-
-
+node_install_recipe ${recipe} ${installed_name}
